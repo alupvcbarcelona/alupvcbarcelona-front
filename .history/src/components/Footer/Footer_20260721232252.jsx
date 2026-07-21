@@ -1,7 +1,7 @@
 import React from "react";
 import packageJson from "../../../package.json";
 import { year } from "./utils";
-import AluPVCLogo from "../Logo/AluPVCLogo";
+import AluPVCLogo from "../Logo/aluPVCLogo";
 import Button from "../Button/Button";
 
 import "./Footer.css";
