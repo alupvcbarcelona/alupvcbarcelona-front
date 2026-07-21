@@ -1,121 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
+import Home from './views/Home/Home'
+import Layout from './layout/Layout'
+import Pack from './views/Pack/Pack'
+import Login from './views/Auth/Login/Login'
+import Register from './views/Auth/Register/Register'
+import Forgot from './views/Auth/Forgot/Forgot'
+import NotFound from './views/404/NotFound'
+import VerifyToken from './views/Auth/VerifyToken/VerifyToken'
+import CreatePassword from './views/Auth/CreatePassword/CreatePassword'
+import Dashboard from './views/Dashboard/Dashboard'
+import Packs from './views/Packs/Packs'
+import Bussiness from './views/Bussiness/Bussiness'
+import PrivacyPolicy from './views/PrivacyPolicy/PrivacyPolicy'
+import EthicsChannel from './views/EthicsChannel/EthicsChannel'
+import Cookies from './views/Cookies/Cookies'
+import Partners from './views/Partners/Partners'
+import SoldPack from './views/SoldPacks/SoldPack'
+import UserPacks from './views/UserPacks/UserPacks'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path={`/colaboradores`} element={<Partners />} />
+        <Route path={`/colaborador/:user/:idPartner`} element={<Pack />} />
+        <Route path={`/politicas-privacidad`} element={<PrivacyPolicy />} />
+        <Route path={`/canal-etico`} element={<EthicsChannel />} />
+        <Route path={`/politicas-cookies`} element={<Cookies />} />
+        <Route path={`/login`} element={<ProtectedRoute requiresAuth={false}><Login /></ProtectedRoute> } />
+        <Route path={`/registro`} element={<ProtectedRoute requiresAuth={false}><Register /></ProtectedRoute>} />
+        <Route path={`/recuperar-password`} element={<ProtectedRoute requiresAuth={false}><Forgot /></ProtectedRoute>} />
+        <Route path={`/verifica-codigo`} element={<ProtectedRoute requiresAuth={false}><VerifyToken /></ProtectedRoute>} />
+        <Route path={`/nueva-contraseña`} element={<ProtectedRoute requiresAuth={false}><CreatePassword /></ProtectedRoute>} />
 
-      <div className="ticks"></div>
+        {/** PROTECTED ROUTE */}
+        <Route path={'/perfil'} element={<ProtectedRoute requiresAuth={true}><Dashboard /></ProtectedRoute>} />
+        <Route path={'/packs'} element={<ProtectedRoute requiresAuth={true}><Packs /></ProtectedRoute>} />
+        <Route path={'/negocio'} element={<ProtectedRoute requiresAuth={true}><Bussiness /></ProtectedRoute>} />
+        <Route path={'/mis-packs-vendidos'} element={<ProtectedRoute requiresAuth={true}><SoldPack /></ProtectedRoute>} />
+        <Route path={`/mis-packs-vendidos/:user/:idUser`} element={<ProtectedRoute requiresAuth={true}><UserPacks /></ProtectedRoute>} />
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+        
+        {/** ERROR ROUTE */}
+        <Route path={`*`} element={<NotFound />} />
+      </Route>
+    </Routes>
   )
 }
 

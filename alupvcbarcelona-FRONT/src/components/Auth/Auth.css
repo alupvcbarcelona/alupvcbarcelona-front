@@ -1,0 +1,25 @@
+.auth__container{
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap:40px;
+}
+
+.auth__content-information{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+
+.auth__form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width:662px) {
+  .auth__container{
+    padding: 50px 20px 20px;
+  }
+}

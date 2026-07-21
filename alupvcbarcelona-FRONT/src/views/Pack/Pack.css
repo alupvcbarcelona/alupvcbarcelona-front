@@ -1,0 +1,21 @@
+.pack__container{
+  padding: 50px;
+}
+
+.pack__content-title{
+  margin-top:30px;
+  margin-bottom: 30px;
+}
+
+.pack__container-card{
+  display: flex;
+  flex-wrap: wrap;
+  gap:20px;
+  justify-content: center;
+}
+
+@media (max-width:662px) {
+  .pack__container{
+    padding: 50px 10px 40px 10px;
+  }
+}

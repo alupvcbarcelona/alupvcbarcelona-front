@@ -1,0 +1,26 @@
+.user__content{
+  padding:50px;
+}
+
+.user__content-loader {
+  display: flex;
+  justify-content: center;
+}
+
+.user__content-title{
+  margin: 40px 0;
+  text-align: center;
+}
+
+.user__container-card{
+  display: flex;
+  gap:20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width:662px) {
+  .user__content{
+    padding: 50px 20px 40px 20px;
+  }
+}

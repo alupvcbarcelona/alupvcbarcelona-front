@@ -1,0 +1,70 @@
+.bussiness__container {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.bussiness__content-header {
+  display: flex;
+  align-items: center;
+}
+
+.bussiness__content-btn-options {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bussiness__content-form {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bussiness__content-form-title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bussiness__content-form-fields {
+  margin: 50px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.bussiness__content-form > div > select {
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: var(--p-bg-quaternary);
+}
+
+@media (max-width: 845px) {
+  .bussiness__content-form > div > select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 662px) {
+  .bussiness__container {
+    padding: 50px 20px 40px 20px;
+  }
+}
+
+@media (max-width: 509px) {
+  .bussiness__content-header {
+    flex-direction: column;
+  }
+}
