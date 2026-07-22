@@ -4,7 +4,20 @@ import "./AluPVCLogo.css";
 
 const AluPVCLogo = () => {
   return (
-    <div className="alupvc-logo fadeIn">
+    <div className="alupvc-logo">
+      {/* <div className="logo-text">
+        <h1>
+          <span className="dark">Alu</span>
+          <span className="blue">PVC</span>
+        </h1>
+
+        <div className="subtitle">
+          <span></span>
+          <p>BCN</p>
+          <span></span>
+        </div>
+      </div> */}
+      {/* <Img icon={logo} w="300px" /> */}
       <div className="logo-container">
         <svg
           viewBox="0 0 600 400"
@@ -18,43 +31,32 @@ const AluPVCLogo = () => {
             </linearGradient>
           </defs>
 
-          {/* A izquierda */}
-          <polygon
-            className="a-left"
-            points="70,290 170,70 220,70 120,290"
-            fill="url(#grad)"
-          />
+          {/* A */}
+          <polygon points="70,290 170,70 220,70 120,290" fill="url(#grad)" />
 
-          {/* A derecha */}
-          <polygon
-            className="a-right"
-            points="220,70 320,290 270,290 170,90"
-            fill="url(#grad)"
-          />
+          <polygon points="220,70 320,290 270,290 170,90" fill="url(#grad)" />
 
           {/* P */}
           <path
-            className="letter-p"
             d="
-    M285 70
-    H470
-    C535 70 570 105 570 150
-    C570 195 535 230 470 230
-    H395
-    L435 290
-    H365
-    L325 180
-    H470
-    C505 180 520 167 520 150
-    C520 133 505 120 470 120
-    H305
-    Z"
+          M285 70
+          H470
+          C535 70 570 105 570 150
+          C570 195 535 230 470 230
+          H395
+          L435 290
+          H365
+          L325 180
+          H470
+          C505 180 520 167 520 150
+          C520 133 505 120 470 120
+          H305
+          Z"
             fill="url(#grad)"
           />
 
           {/* Línea izquierda */}
           <rect
-            className="line-left"
             x="30"
             y="345"
             width="115"
@@ -65,7 +67,6 @@ const AluPVCLogo = () => {
 
           {/* Línea derecha */}
           <rect
-            className="line-right"
             x="455"
             y="345"
             width="115"
@@ -75,12 +76,7 @@ const AluPVCLogo = () => {
           />
 
           {/* BCN */}
-          <text
-            x="300"
-            y="366"
-            textAnchor="middle"
-            className="logo-text logo-bcn"
-          >
+          <text x="300" y="366" textAnchor="middle" className="logo-text">
             BCN
           </text>
         </svg>

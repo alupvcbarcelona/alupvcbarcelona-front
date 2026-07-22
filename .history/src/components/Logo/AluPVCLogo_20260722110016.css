@@ -1,0 +1,271 @@
+body{
+
+    margin:0;
+    background:#020202;
+    overflow:hidden;
+
+}
+
+.intro{
+
+    width:100vw;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+
+}
+
+/* ========================= */
+
+.logo{
+
+    width:450px;
+    z-index:3;
+
+    animation:
+
+    pulse 4s infinite ease-in-out 2.5s,
+
+    glow 4s infinite ease-in-out 2.5s;
+
+}
+
+/* ========================= */
+
+.flash{
+
+    position:absolute;
+
+    width:40px;
+    height:40px;
+
+    border-radius:50%;
+
+    background:white;
+
+    filter:blur(50px);
+
+    animation:
+
+    flash .25s ease 1.15s forwards;
+
+    opacity:0;
+
+}
+
+/* ========================= */
+
+.shine{
+
+    position:absolute;
+
+    width:140px;
+    height:900px;
+
+    background:
+
+    linear-gradient(
+
+    transparent,
+
+    rgba(255,255,255,.8),
+
+    transparent
+
+    );
+
+    transform:rotate(25deg);
+
+    left:-200px;
+
+    animation:
+
+    shine 1.4s ease 1.4s forwards;
+
+}
+
+/* ========================= */
+
+.bcn{
+
+    position:absolute;
+
+    bottom:90px;
+
+    display:flex;
+
+    gap:25px;
+
+    font-size:52px;
+
+    font-weight:bold;
+
+    color:#4d45ff;
+
+    letter-spacing:8px;
+
+}
+
+.bcn span{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+}
+
+.bcn span:nth-child(1){
+
+animation:type .4s .9s forwards;
+
+}
+
+.bcn span:nth-child(2){
+
+animation:type .4s 1.1s forwards;
+
+}
+
+.bcn span:nth-child(3){
+
+animation:type .4s 1.3s forwards;
+
+}
+
+/* ========================= */
+
+@keyframes flash{
+
+0%{
+
+opacity:0;
+transform:scale(.3);
+
+}
+
+50%{
+
+opacity:1;
+transform:scale(12);
+
+}
+
+100%{
+
+opacity:0;
+
+}
+
+}
+
+@keyframes shine{
+
+0%{
+
+left:-250px;
+
+}
+
+100%{
+
+left:120%;
+
+}
+
+}
+
+@keyframes pulse{
+
+0%,100%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+}
+
+@keyframes glow{
+
+0%,100%{
+
+filter:
+
+drop-shadow(0 0 12px #3c2dff)
+
+drop-shadow(0 0 40px #4334ff);
+
+}
+
+50%{
+
+filter:
+
+drop-shadow(0 0 30px #5e53ff)
+
+drop-shadow(0 0 90px #4d40ff);
+
+}
+
+}
+
+@keyframes type{
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ========================= */
+/* Partículas */
+/* ========================= */
+
+.particles{
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+radial-gradient(#4b40ff 1px, transparent 1px);
+
+background-size:70px 70px;
+
+opacity:.18;
+
+animation:
+
+moveStars 25s linear infinite;
+
+}
+
+@keyframes moveStars{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-120px);
+
+}
+
+}

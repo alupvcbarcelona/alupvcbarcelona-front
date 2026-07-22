@@ -1,0 +1,146 @@
+.logo-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#000;
+    overflow:hidden;
+}
+
+.logo-svg{
+    width:420px;
+    overflow:visible;
+    filter:drop-shadow(0 0 0px #4d39ff);
+    animation:
+        intro 1.2s ease forwards,
+        glow 4s ease-in-out infinite 2s;
+}
+
+.logo-a{
+    transform-origin:center;
+    animation:aEnter 1s cubic-bezier(.18,1,.25,1) forwards;
+}
+
+.logo-p{
+    transform-origin:center;
+    opacity:0;
+    animation:pEnter 1s cubic-bezier(.18,1,.25,1) .25s forwards;
+}
+
+.logo-bottom{
+    opacity:0;
+    animation:bottom 1s ease .9s forwards;
+}
+
+.logo-text{
+    fill:#3d2cff;
+    font-size:54px;
+    font-weight:bold;
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing:22px;
+}
+
+.shine{
+    fill:rgba(255,255,255,.45);
+    transform:rotate(20deg);
+    filter:blur(25px);
+    animation:shine 2.4s ease 1.4s forwards;
+}
+
+@keyframes intro{
+
+    0%{
+        opacity:0;
+        transform:scale(.45) rotateX(80deg);
+        filter:blur(20px);
+    }
+
+    70%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+        filter:blur(0);
+    }
+
+}
+
+@keyframes aEnter{
+
+    0%{
+        transform:translateX(-250px) rotate(-35deg);
+        opacity:0;
+    }
+
+    70%{
+        transform:translateX(20px);
+    }
+
+    100%{
+        transform:translateX(0);
+        opacity:1;
+    }
+
+}
+
+@keyframes pEnter{
+
+    0%{
+        transform:translateX(260px) rotate(30deg) scale(.6);
+        opacity:0;
+    }
+
+    70%{
+        transform:translateX(-15px);
+    }
+
+    100%{
+        transform:translateX(0) scale(1);
+        opacity:1;
+    }
+
+}
+
+@keyframes bottom{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes glow{
+
+    0%,100%{
+        filter:
+        drop-shadow(0 0 8px #4330ff)
+        drop-shadow(0 0 20px #4330ff);
+    }
+
+    50%{
+        filter:
+        drop-shadow(0 0 25px #5e49ff)
+        drop-shadow(0 0 60px #5e49ff);
+    }
+
+}
+
+@keyframes shine{
+
+    from{
+        transform:translateX(-650px) rotate(20deg);
+    }
+
+    to{
+        transform:translateX(950px) rotate(20deg);
+    }
+
+}
