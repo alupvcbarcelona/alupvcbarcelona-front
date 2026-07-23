@@ -42,7 +42,7 @@ const Footer = () => {
     const email = "alupvcbarcelona@gmail.com";
     const subject = "Solicitud de presupuesto";
     const body =
-      "Buenos días,\n\nMe gustaría solicitar un presupuesto para [completar]\n\nGracias.";
+      "Buenos días,\n\nMe gustaría solicitar un presupuesto para...\n\nGracias.";
 
     if (isMobile) {
       const url = `mailto:${email}?subject=${encodeURIComponent(

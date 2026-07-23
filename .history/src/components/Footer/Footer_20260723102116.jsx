@@ -42,20 +42,16 @@ const Footer = () => {
     const email = "alupvcbarcelona@gmail.com";
     const subject = "Solicitud de presupuesto";
     const body =
-      "Buenos días,\n\nMe gustaría solicitar un presupuesto para [completar]\n\nGracias.";
+      "Buenos días,\n\nMe gustaría solicitar un presupuesto para...\n\nGracias.";
 
     if (isMobile) {
       const url = `mailto:${email}?subject=${encodeURIComponent(
         subject,
       )}&body=${encodeURIComponent(body)}`;
 
-      window.open(url, "_self");
+      window.open(url);
     } else {
-      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
-        email,
-      )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-      window.open(gmailUrl, "_blank");
+      alert(`Llámanos al ${phone}`);
     }
   };
 
