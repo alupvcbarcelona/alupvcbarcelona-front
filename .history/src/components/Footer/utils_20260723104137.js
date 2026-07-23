@@ -55,28 +55,3 @@ Un cordial saludo,
     window.open(gmailUrl, "_blank");
   }
 };
-
-export const handleWhatsapp = () => {
-    const phone = "34641495199"; // 34 = España
-    const message =
-      "Buenos días, me interesan tus servicios. ¿Podrías contactarme? Gracias.";
-
-    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-
-    window.open(url, "_blank");
-  };
-
-  export const handleCallPhone = () => {
-    const phone = "+34641495199";
-    const isMobile =
-      window.innerWidth < 500 ||
-      /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(
-        navigator.userAgent,
-      );
-
-    if (isMobile) {
-      window.location.href = `tel:${phone.replace(/\s/g, "")}`;
-    } else {
-      alert(`Llámanos al ${phone}`);
-    }
-  };

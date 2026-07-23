@@ -1,6 +1,6 @@
 import React from "react";
 import packageJson from "../../../package.json";
-import { year, handleEmail, handleWhatsapp, handleCallPhone } from "./utils";
+import { year } from "./utils";
 import AluPVCLogo from "../Logo/AluPVCLogo";
 import Button from "../Button/Button";
 
