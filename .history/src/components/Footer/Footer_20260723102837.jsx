@@ -43,17 +43,17 @@ const Footer = () => {
     const subject = "Solicitud de presupuesto";
     const body = `Buenos días,
 
-                Me gustaría solicitar un presupuesto.
+Me gustaría solicitar un presupuesto.
 
-                Por favor, mis datos son:
+Por favor, mis datos son:
 
-                - Nombre:
-                - Teléfono:
-                - Ciudad:
+- Nombre:
+- Teléfono:
+- Ciudad:
 
-                Descripción del proyecto o servicio que necesito:
+Descripción del proyecto o servicio que necesito:
 
-                Gracias. Quedo a la espera de su respuesta.`;
+Gracias. Quedo a la espera de su respuesta.`;
 
     if (isMobile) {
       const url = `mailto:${email}?subject=${encodeURIComponent(
