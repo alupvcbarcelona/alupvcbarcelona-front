@@ -17,33 +17,6 @@ const Footer = () => {
     window.open(url, "_blank");
   };
 
-  const handleCallPhone = () => {
-    const phone = "+34641495199";
-    const isMobile =
-      window.innerWidth < 500 ||
-      /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(
-        navigator.userAgent,
-      );
-
-    if (isMobile) {
-      window.location.href = `tel:${phone.replace(/\s/g, "")}`;
-    } else {
-      alert(`Llámanos al ${phone}`);
-    }
-  };
-
-  const handleEmail = () => {
-    console.log("handleEmail");
-    const email = "alupvcbarcelona@gmail.com";
-    const subject = "Solicitud de presupuesto";
-    const body =
-      "Buenos días,\n\nMe gustaría solicitar un presupuesto para...\n\nGracias.";
-
-    window.location.href = `mailto:${email}?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`;
-  };
-
   return (
     <footer>
       <div className="footer__container filter">
@@ -67,14 +40,14 @@ const Footer = () => {
             p="5px 15px"
             br="5px"
             children="¿Urgente? Llamame"
-            onClick={handleCallPhone}
+            onClick={handleWhatsapp}
           />
           <Button
             ariaLabel="Email"
             p="5px 15px"
             br="5px"
             children="¿Presupuesto? envíame correo"
-            onClick={handleEmail}
+            onClick={handleWhatsapp}
           />
         </div>
       </div>

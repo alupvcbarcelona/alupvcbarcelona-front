@@ -18,31 +18,23 @@ const Footer = () => {
   };
 
   const handleCallPhone = () => {
-    const phone = "+34641495199";
-    const isMobile =
-      window.innerWidth < 500 ||
-      /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(
-        navigator.userAgent,
-      );
+    const handleCallPhone = () => {
+      const phone = "+34641495199";
 
-    if (isMobile) {
-      window.location.href = `tel:${phone.replace(/\s/g, "")}`;
-    } else {
-      alert(`Llámanos al ${phone}`);
-    }
+      window.open(`tel:${phone}`);
+    };
   };
 
   const handleEmail = () => {
-    console.log("handleEmail");
-    const email = "alupvcbarcelona@gmail.com";
-    const subject = "Solicitud de presupuesto";
-    const body =
-      "Buenos días,\n\nMe gustaría solicitar un presupuesto para...\n\nGracias.";
+  const email = "alupvcbarcelona@gmail.com";
+  const subject = "Solicitud de presupuesto";
+  const body =
+    "Buenos días,\n\nMe gustaría solicitar un presupuesto para...\n\nGracias.";
 
-    window.location.href = `mailto:${email}?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`;
-  };
+  window.location.href = `mailto:${email}?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
+};
 
   return (
     <footer>

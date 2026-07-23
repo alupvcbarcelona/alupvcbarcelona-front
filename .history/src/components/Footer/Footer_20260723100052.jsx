@@ -18,30 +18,13 @@ const Footer = () => {
   };
 
   const handleCallPhone = () => {
-    const phone = "+34641495199";
-    const isMobile =
-      window.innerWidth < 500 ||
-      /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(
-        navigator.userAgent,
-      );
+    const phone = "34641495199"; // 34 = España
+    const message =
+      "Buenos días, me interesan tus servicios. ¿Podrías contactarme? Gracias.";
 
-    if (isMobile) {
-      window.location.href = `tel:${phone.replace(/\s/g, "")}`;
-    } else {
-      alert(`Llámanos al ${phone}`);
-    }
-  };
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
-  const handleEmail = () => {
-    console.log("handleEmail");
-    const email = "alupvcbarcelona@gmail.com";
-    const subject = "Solicitud de presupuesto";
-    const body =
-      "Buenos días,\n\nMe gustaría solicitar un presupuesto para...\n\nGracias.";
-
-    window.location.href = `mailto:${email}?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`;
+    window.open(url, "_blank");
   };
 
   return (
@@ -74,7 +57,7 @@ const Footer = () => {
             p="5px 15px"
             br="5px"
             children="¿Presupuesto? envíame correo"
-            onClick={handleEmail}
+            onClick={handleWhatsapp}
           />
         </div>
       </div>

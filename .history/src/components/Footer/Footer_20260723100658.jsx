@@ -33,7 +33,6 @@ const Footer = () => {
   };
 
   const handleEmail = () => {
-    console.log("handleEmail");
     const email = "alupvcbarcelona@gmail.com";
     const subject = "Solicitud de presupuesto";
     const body =

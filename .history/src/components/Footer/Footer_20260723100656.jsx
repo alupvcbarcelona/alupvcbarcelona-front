@@ -19,6 +19,7 @@ const Footer = () => {
 
   const handleCallPhone = () => {
     const phone = "+34641495199";
+
     const isMobile =
       window.innerWidth < 500 ||
       /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(
@@ -33,7 +34,6 @@ const Footer = () => {
   };
 
   const handleEmail = () => {
-    console.log("handleEmail");
     const email = "alupvcbarcelona@gmail.com";
     const subject = "Solicitud de presupuesto";
     const body =
