@@ -1,6 +1,6 @@
-import img_1 from "/ventana_2.jpg";
-import img_2 from "/ventana_3.jpg";
-import img_3 from "/ventana_4.jpg";
+import img_1 from "/ventana_2.png";
+import img_2 from "/ventana_3.png";
+import img_3 from "/ventana_4.png";
 
 export const home_content = {
   body: {

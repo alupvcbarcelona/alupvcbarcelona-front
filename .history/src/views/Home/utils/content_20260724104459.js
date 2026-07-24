@@ -1,6 +1,6 @@
-import img_1 from "/ventana_2.jpg";
-import img_2 from "/ventana_3.jpg";
-import img_3 from "/ventana_4.jpg";
+import img_1 from "/il-1.svg";
+import img_2 from "/il-2.svg";
+import img_3 from "/il-3.svg";
 
 export const home_content = {
   body: {
