@@ -4,22 +4,24 @@ import img_3 from "/ventana_4.jpg";
 
 export const home_content = {
   body: {
-    title: "Especialistas en ventanas de aluminio y PVC en Barcelona y el Maresme.",
-    description: "Instalación, reparación y mantenimiento.",
+    title:
+      "Instalación y reparación de ventanas de aluminio y PVC en Barcelona y el Maresme",
+    description:
+      "Especialistas en ventanas, persianas y mosquiteras a medida para viviendas, oficinas y locales comerciales.",
     description_:
-      "También instalamos y reparamos persianas y mosquiteras a medida para viviendas, oficinas y locales comerciales.",
+      "Instalamos, reparamos y realizamos el mantenimiento de ventanas de aluminio y PVC, persianas y mosquiteras, incluso si fueron instaladas por otra empresa.",
     helmet: {
       title:
-        "Ventanas de Aluminio y PVC en Barcelona y Maresme | Instalación, Reparación y Mantenimiento | AluPVC Barcelona",
+        "Instalación y Reparación de Ventanas de Aluminio y PVC en Barcelona y el Maresme | AluPVC Barcelona",
       description: {
         name: "description",
         content:
-          "Especialistas en instalación, reparación y mantenimiento de ventanas de aluminio y PVC en Barcelona y el Maresme. Instalamos y reparamos persianas y mosquiteras a medida con materiales de primera calidad, garantizando un excelente aislamiento térmico y acústico.",
+          "Especialistas en instalación, reparación y mantenimiento de ventanas de aluminio y PVC en Barcelona y el Maresme. También instalamos y reparamos persianas y mosquiteras a medida con materiales de primera calidad y un excelente aislamiento térmico y acústico.",
       },
       keywords: {
         name: "keywords",
         content:
-          "ventanas aluminio Barcelona, ventanas PVC Barcelona, ventanas aluminio Maresme, ventanas PVC Maresme, instalación ventanas aluminio, instalación ventanas PVC, reparación ventanas aluminio, reparación ventanas PVC, mantenimiento ventanas aluminio, mantenimiento ventanas PVC, persianas Barcelona, reparación persianas Barcelona, mosquiteras Barcelona, instalación mosquiteras, reparación mosquiteras, carpintería aluminio Barcelona, cerramientos aluminio, aislamiento térmico ventanas, aislamiento acústico ventanas, AluPVC Barcelona",
+          "ventanas aluminio Barcelona, ventanas PVC Barcelona, reparación ventanas aluminio Barcelona, reparación ventanas PVC Barcelona, instalación ventanas Barcelona, persianas Barcelona, reparación persianas Barcelona, mosquiteras Barcelona, instalación mosquiteras Barcelona, reparación mosquiteras Barcelona, ventanas Maresme, carpintería aluminio Barcelona, mantenimiento ventanas PVC, mantenimiento ventanas aluminio, aislamiento térmico, aislamiento acústico",
       },
     },
   },
@@ -28,53 +30,59 @@ export const home_content = {
 export const home_description = {
   body: [
     {
-      title: "Soluciones para particulares y empresas",
+      title: "Ventanas, persianas y mosquiteras para cualquier espacio",
       article: [
         {
           paragraph:
-            "Realizamos instalaciones, reparaciones y mantenimientos adaptados a cualquier tipo de inmueble.",
+            "Ofrecemos soluciones totalmente personalizadas para viviendas, oficinas y locales comerciales en Barcelona y el Maresme. Trabajamos con materiales de primera calidad para conseguir instalaciones duraderas, seguras y con un excelente aislamiento térmico y acústico.",
         },
         {
-          paragraph: "- Viviendas particulares.",
+          paragraph: "• Viviendas particulares.",
         },
         {
-          paragraph: "- Locales comerciales.",
+          paragraph: "• Comunidades de vecinos.",
         },
         {
-          paragraph: "- Oficinas y espacios profesionales.",
+          paragraph: "• Locales comerciales.",
+        },
+        {
+          paragraph: "• Oficinas y despachos.",
         },
       ],
       img: {
         img: img_2,
-        alt: "Instalación de ventanas de aluminio y PVC en Barcelona",
+        alt: "Instalación de ventanas de aluminio y PVC en Barcelona y el Maresme",
         width: 350,
       },
     },
     {
-      title: "¿Por qué elegir AluPVC Barcelona?",
+      title: "¿Qué nos diferencia?",
       article: [
         {
           paragraph:
-            "Ofrecemos soluciones totalmente personalizadas con materiales de primera calidad y un equipo técnico altamente cualificado para garantizar instalaciones duraderas, seguras y eficientes.",
+            "Además de instalar ventanas de aluminio y PVC, somos especialistas en su reparación y mantenimiento. Reparamos ventanas, persianas y mosquiteras aunque hayan sido instaladas por otras empresas, ofreciendo soluciones eficaces que alargan su vida útil y evitan sustituciones innecesarias.",
           ol: [
             {
-              li: "Especialistas en ventanas de aluminio y PVC con un excelente aislamiento térmico y acústico.",
+              li: "Instalación personalizada de ventanas de aluminio y PVC.",
             },
             {
-              li: "Instalación y reparación de persianas y mosquiteras totalmente a medida.",
+              li: "Reparación de ventanas, persianas y mosquiteras de cualquier instalación.",
             },
             {
-              li: "Reparamos ventanas, persianas y mosquiteras aunque hayan sido instaladas por otra empresa.",
+              li: "Técnicos altamente cualificados y materiales de primera calidad.",
             },
             {
-              li: "Soluciones profesionales que prolongan la vida útil de las instalaciones y evitan sustituciones innecesarias.",
+              li: "Excelente aislamiento térmico y acústico para mejorar el confort y la eficiencia energética.",
+            },
+            {
+              li: "Servicio profesional en Barcelona y toda la comarca del Maresme.",
             },
           ],
         },
       ],
       img: {
         img: img_1,
-        alt: "Especialistas en ventanas de aluminio y PVC en Barcelona",
+        alt: "Reparación de ventanas de aluminio y PVC en Barcelona",
         width: 350,
       },
     },
@@ -83,19 +91,25 @@ export const home_description = {
       article: [
         {
           paragraph:
-            "Ponemos a tu disposición un servicio integral para mantener tus cerramientos en perfecto estado, tanto en instalaciones nuevas como en reparaciones.",
+            "Realizamos un servicio integral para que tus cerramientos se mantengan siempre en perfecto estado.",
           description_: [
             {
               title: "Instalación",
               ul: [
                 {
-                  li: "Ventanas de aluminio y PVC totalmente personalizadas.",
+                  li: "Ventanas de aluminio a medida.",
                 },
                 {
-                  li: "Persianas y mosquiteras a medida para viviendas, oficinas y locales comerciales.",
+                  li: "Ventanas de PVC personalizadas.",
                 },
                 {
-                  li: "Materiales de alta calidad con acabados profesionales.",
+                  li: "Persianas a medida y motorización.",
+                },
+                {
+                  li: "Mosquiteras para todo tipo de ventanas.",
+                },
+                {
+                  li: "Acabados profesionales con materiales de alta calidad.",
                 },
               ],
             },
@@ -103,13 +117,22 @@ export const home_description = {
               title: "Reparación y mantenimiento",
               ul: [
                 {
-                  li: "Reparación de ventanas de aluminio y PVC, incluso si fueron instaladas por otra empresa.",
+                  li: "Reparación de ventanas de aluminio.",
                 },
                 {
-                  li: "Reparación de persianas y mosquiteras por desgaste, averías o roturas.",
+                  li: "Reparación de ventanas de PVC.",
                 },
                 {
-                  li: "Mantenimiento para prolongar la vida útil de las instalaciones y mejorar su funcionamiento.",
+                  li: "Reparación de persianas.",
+                },
+                {
+                  li: "Reparación de mosquiteras.",
+                },
+                {
+                  li: "Sustitución de herrajes, cierres, ruedas y mecanismos.",
+                },
+                {
+                  li: "Mantenimiento preventivo para prolongar la vida útil de la instalación.",
                 },
               ],
             },
@@ -118,7 +141,7 @@ export const home_description = {
       ],
       img: {
         img: img_3,
-        alt: "Reparación e instalación de ventanas de aluminio y PVC en Barcelona",
+        alt: "Instalación y mantenimiento de ventanas de aluminio y PVC",
         width: 350,
       },
     },
