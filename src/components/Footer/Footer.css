@@ -15,6 +15,12 @@
   gap: 2rem;
 }
 
+.footer_content-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .footer_content-version {
   display: flex;
   flex-direction: column;
