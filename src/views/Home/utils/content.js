@@ -50,7 +50,8 @@ export const home_description = {
         },
       ],
       img: {
-        img: img_2,
+        /* img: img_2, */
+        img: "https://res.cloudinary.com/bunzti4y/image/upload/v1784923639/sustitucion_de_cojinetes_de_ventana_corredera_fcj765.jpg",
         alt: "Instalación de ventanas de aluminio y PVC en Barcelona y el Maresme",
         width: 350,
       },
@@ -81,7 +82,8 @@ export const home_description = {
         },
       ],
       img: {
-        img: img_1,
+        /* img: img_1 */
+        img: "https://res.cloudinary.com/bunzti4y/image/upload/v1784923517/puerta_de_aluminio_de_panel_sin_molduras_s7fjpv.jpg",
         alt: "Reparación de ventanas de aluminio y PVC en Barcelona",
         width: 350,
       },
@@ -140,7 +142,7 @@ export const home_description = {
         },
       ],
       img: {
-        img: img_3,
+        img: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924127/IMG_3822_lfm5x5.jpg",
         alt: "Instalación y mantenimiento de ventanas de aluminio y PVC",
         width: 350,
       },
