@@ -1,28 +1,29 @@
-import "./Img.css";
+import './Img.css'
 
 const Img = ({
   icon,
   w = 20,
   h = w,
-  p = "0px",
-  br = "0px",
+  p = '0px',
+  br = '0px',
   alt,
   title = null,
-  action = () => {},
+  action = () => {}
 }) => {
   return (
     <img
-      className="svg__icon"
+      className='svg__icon'
       src={icon}
       width={w}
       height={h}
-      style={{ padding: p, borderRadius: br }}
+      style={{ padding: p }}
       alt={alt}
       title={title}
       onClick={action}
-      loading="lazy"
+      borderRadius={br}
+      loading='lazy'
     />
-  );
-};
+  )
+}
 
-export default Img;
+export default Img

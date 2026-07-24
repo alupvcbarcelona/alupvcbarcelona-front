@@ -49,7 +49,7 @@ const Home = () => {
               ))}
             </div>
             <div>
-              <Img icon={item.img.img} br='20px' alt={item.img.alt} w={item.img.width} />
+              <Img icon={item.img.img} alt={item.img.alt} w={item.img.width} />
             </div>
           </div>
         ))}
