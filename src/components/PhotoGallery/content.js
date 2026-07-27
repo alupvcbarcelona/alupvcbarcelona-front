@@ -1,9 +1,9 @@
 export const images = [
-  {
+  /* {
     id: 1,
     src: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924896/IMG_0292_hqznir.jpg",
     alt: "ALUPVC BARCELONA: instalación de portones, ventanas, mosquiteras y mucho más.",
-  },
+  }, */
   {
     id: 2,
     src: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924896/IMG_9805_ybdf2a.jpg",
@@ -39,11 +39,11 @@ export const images = [
     src: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924893/IMG_5278_nbsmlh.jpg",
     alt: "ALUPVC BARCELONA: instalación de portones, ventanas, mosquiteras y mucho más.",
   },
-  {
+  /* {
     id: 9,
     src: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924894/IMG_4567_giiwan.jpg",
     alt: "ALUPVC BARCELONA: instalación de portones, ventanas, mosquiteras y mucho más.",
-  },
+  }, */
   {
     id: 10,
     src: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924894/IMG_4599_cw9re7.jpg",
@@ -59,26 +59,26 @@ export const images = [
     src: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924894/IMG_4602_i8wiy1.jpg",
     alt: "ALUPVC BARCELONA: instalación de portones, ventanas, mosquiteras y mucho más.",
   },
-  {
+  /* {
     id: 13,
     src: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924895/IMG_0673_j3oaye.jpg",
     alt: "ALUPVC BARCELONA: instalación de portones, ventanas, mosquiteras y mucho más.",
-  },
+  }, */
   {
     id: 14,
     src: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924895/IMG_0677_zt87oc.jpg",
     alt: "ALUPVC BARCELONA: instalación de portones, ventanas, mosquiteras y mucho más.",
   },
-  {
+  /* {
     id: 15,
     src: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924895/IMG_3821_gxmahc.jpg",
     alt: "ALUPVC BARCELONA: instalación de portones, ventanas, mosquiteras y mucho más.",
-  },
-  {
+  }, */
+  /* {
     id: 16,
     src: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924895/IMG_3822_p9t6vv.jpg",
     alt: "ALUPVC BARCELONA: instalación de portones, ventanas, mosquiteras y mucho más.",
-  },
+  }, */
   {
     id: 17,
     src: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924895/IMG_3890_sd8slo.jpg",
@@ -94,11 +94,11 @@ export const images = [
     src: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924895/IMG_3913_iina77.jpg",
     alt: "ALUPVC BARCELONA: instalación de portones, ventanas, mosquiteras y mucho más.",
   },
-  {
+  /* {
     id: 20,
     src: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924896/IMG_9793_jolifk.jpg",
     alt: "ALUPVC BARCELONA: instalación de portones, ventanas, mosquiteras y mucho más.",
-  },
+  }, */
   {
     id: 21,
     src: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924896/IMG_9806_ial0od.jpg",
