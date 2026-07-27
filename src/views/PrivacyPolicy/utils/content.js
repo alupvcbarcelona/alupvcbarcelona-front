@@ -1,94 +1,126 @@
 const PRIVACY_CONTENT = (PATH) => {
   const content = {
-    title: "Política de Privacidad de AluPVC Barcelona",
+    title: "Política de Privacidad",
     sections: [
       {
-        title:
-          "1. Identidad y Datos de Contacto del Responsable del Tratamiento",
-        content: `En cumplimiento del Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016 (RGPD), y de la Ley Orgánica 3/2018, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD), le informamos de que los datos personales facilitados a través del sitio web serán tratados por:
+        title: "1. Responsable del tratamiento",
+        content: `El responsable del tratamiento de los datos personales facilitados a través de esta página web es:
 
-Responsable del tratamiento: AluPVC Barcelona
-NIF: [COMPLETAR]
-Dirección: [COMPLETAR]
-Correo electrónico: [COMPLETAR]
-`,
+Responsable: Keiner José Castañeda Navarro
+NIF: 60428129E
+Domicilio profesional: Calle Bergantí Caupolicán, número 30, El Masnou, Barcelona
+Teléfono: 631 95 73 78
+Correo electrónico: alupvcbarcelona@gmail.com`,
       },
       {
-        title:
-          "2. Datos Personales que Recopilamos y Finalidad del Tratamiento",
+        title: "2. Datos personales tratados",
         subsections: [
           {
-            subtitle: "Datos recopilados",
-            content: `Podremos recopilar los siguientes datos personales cuando el usuario contacte con nosotros o solicite información:
+            subtitle: "Datos que pueden recopilarse",
+            content: `A través de la página web podrán tratarse los siguientes datos:
 
-- Nombre y apellidos.
-- Dirección de correo electrónico.
-- Número de teléfono.
-- Dirección del inmueble (cuando sea necesaria para elaborar un presupuesto).
-- Información facilitada voluntariamente en formularios o comunicaciones.
-`,
+- Nombre.
+- Consultas y comunicaciones mantenidas con el cliente.`,
           },
           {
-            subtitle: "Finalidades del tratamiento",
-            content: `Los datos personales serán tratados con las siguientes finalidades:
-
-- Atender consultas realizadas a través del sitio web.
-- Elaborar y enviar presupuestos personalizados.
-- Gestionar la contratación de nuestros productos y servicios.
-- Coordinar visitas técnicas e instalaciones.
-- Mantener comunicaciones relacionadas con los trabajos contratados.
-- Cumplir las obligaciones legales aplicables.
-`,
+            subtitle: "Información adicional",
+            content: `El usuario deberá abstenerse de facilitar datos que no sean necesarios para atender su consulta o elaborar el presupuesto.`,
           },
         ],
       },
       {
-        title: "3. Legitimación para el Tratamiento",
-        content: `La base jurídica del tratamiento de los datos es:
+        title: "3. Finalidades del tratamiento",
+        content: `Los datos personales se utilizarán para:
 
-- El consentimiento del interesado al enviar un formulario de contacto.
-- La ejecución de un contrato o la aplicación de medidas precontractuales cuando se solicita un presupuesto o se contrata un servicio.
-- El cumplimiento de obligaciones legales.
-- El interés legítimo del responsable para mejorar la atención al cliente y garantizar la seguridad del sitio web.`,
+- Atender consultas y solicitudes de información.
+- Contactar con las personas interesadas.
+- Concertar visitas o mediciones.
+- Elaborar, enviar y gestionar presupuestos.
+- Gestionar la aceptación del presupuesto.
+- Prestar los servicios contratados.
+- Gestionar la facturación y el cobro.
+- Cumplir las obligaciones fiscales, contables y administrativas.
+- Atender incidencias, reclamaciones y garantías.
+
+Los datos no se utilizarán para enviar publicidad sin una base jurídica válida o sin la autorización correspondiente.`,
       },
       {
-        title: "4. Comunicación de los Datos",
-        content: `Los datos personales no serán cedidos a terceros salvo obligación legal o cuando sea necesario para la prestación del servicio.
+        title: "4. Base jurídica",
+        content: `El tratamiento de los datos se fundamenta en:
 
-En caso necesario, podrán tener acceso a los datos proveedores que actúen como encargados del tratamiento (por ejemplo, servicios de alojamiento web, correo electrónico o gestión informática), siempre bajo contrato y cumpliendo la normativa vigente en materia de protección de datos.`,
+- La aplicación de medidas precontractuales solicitadas por el interesado, cuando pide información o un presupuesto.
+- La ejecución del contrato, cuando el presupuesto es aceptado.
+- El cumplimiento de obligaciones legales, especialmente fiscales y contables.
+- El consentimiento del interesado, cuando sea necesario para una finalidad concreta.`,
       },
       {
-        title: "5. Conservación de los Datos",
-        content: `Los datos personales se conservarán durante el tiempo necesario para atender la solicitud realizada o mientras exista una relación contractual.
+        title: "5. Conservación de los datos",
+        content: `Los datos se conservarán durante el tiempo necesario para atender la consulta o gestionar el presupuesto.
 
-Posteriormente permanecerán bloqueados durante los plazos legalmente establecidos para atender posibles responsabilidades legales.`,
+Cuando el presupuesto sea aceptado, se conservarán durante la relación contractual y, posteriormente, durante los plazos exigidos por la normativa fiscal, contable y de prescripción de responsabilidades.
+
+Los presupuestos no aceptados se conservarán durante un plazo razonable para su seguimiento y para atender posibles consultas o reclamaciones. Finalizado dicho plazo, serán eliminados.`,
       },
       {
-        title: "6. Derechos de los Usuarios",
-        content: `El usuario puede ejercer en cualquier momento los siguientes derechos:
+        title: "6. Destinatarios",
+        subsections: [
+          {
+            subtitle: "Comunicación de datos",
+            content: `Los datos no se venderán ni se cederán a terceros, salvo obligación legal o cuando resulte necesario para prestar el servicio.`,
+          },
+          {
+            subtitle: "Podrán tener acceso a los datos",
+            content: `- La asesoría fiscal o contable.
+- El proveedor de alojamiento de la página web.
+- El proveedor de correo electrónico.
+- El profesional encargado del mantenimiento informático.
+- Los proveedores o colaboradores que deban intervenir en la ejecución del trabajo.
+- Las administraciones públicas y autoridades competentes cuando exista una obligación legal.
 
-- Acceso.
-- Rectificación.
-- Supresión.
-- Oposición.
-- Limitación del tratamiento.
-- Portabilidad de los datos.
-
-Para ejercer estos derechos puede enviar una solicitud junto con un documento acreditativo de identidad al correo electrónico del responsable.
-
-Asimismo, si considera que el tratamiento de sus datos no se ajusta a la normativa vigente, puede presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD).`,
+Los proveedores que traten datos por cuenta del responsable deberán hacerlo conforme a sus instrucciones y a la normativa de protección de datos.`,
+          },
+        ],
       },
       {
-        title: "7. Medidas de Seguridad",
-        content: `AluPVC Barcelona aplica las medidas técnicas y organizativas necesarias para garantizar la confidencialidad, integridad y disponibilidad de los datos personales, evitando su alteración, pérdida, tratamiento o acceso no autorizado.`,
+        title: "7. Transferencias internacionales",
+        content: `En principio, no se prevé realizar transferencias internacionales de datos.
+
+No obstante, si alguno de los proveedores tecnológicos trata información fuera del Espacio Económico Europeo, se comprobará que existan las garantías exigidas por la normativa.`,
       },
       {
-        title: "8. Modificaciones de la Política de Privacidad",
-        content: `AluPVC Barcelona podrá actualizar esta Política de Privacidad para adaptarla a novedades legislativas o cambios en los servicios ofrecidos. La versión vigente será siempre la publicada en este sitio web.`,
+        title: "8. Derechos de los interesados",
+        content: `El interesado puede ejercer los derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad.
+
+Para ello, puede enviar una solicitud a:
+
+Correo electrónico: alupvcbarcelona@gmail.com
+Dirección postal: Calle Bergantí Caupolicán, número 30, El Masnou, Barcelona.
+
+La solicitud deberá identificar al interesado e indicar el derecho que desea ejercer.
+
+También podrá presentar una reclamación ante la Agencia Española de Protección de Datos.`,
       },
       {
-        title: "9. Contacto",
-        content: `Para cualquier consulta relacionada con esta Política de Privacidad o con el tratamiento de sus datos personales puede contactar con nosotros a través del correo electrónico indicado en el apartado de identificación del responsable.`,
+        title: "9. Seguridad de la información",
+        content: `El responsable adoptará las medidas técnicas y organizativas necesarias para proteger los datos personales frente a su pérdida, alteración, acceso no autorizado o divulgación.`,
+      },
+      {
+        title: "10. Exactitud de los datos",
+        content: `El usuario garantiza que los datos proporcionados son verdaderos, exactos y están actualizados.
+
+Cuando facilite datos de otra persona, declara disponer de autorización para ello.`,
+      },
+      {
+        title: "11. Menores de edad",
+        content: `Los servicios ofrecidos en esta página web no están dirigidos específicamente a menores de edad.
+
+Los menores no deberán facilitar datos personales sin autorización de sus padres o representantes legales.`,
+      },
+      {
+        title: "12. Modificación de la política",
+        content: `La presente Política de Privacidad podrá actualizarse cuando resulte necesario por cambios normativos, técnicos o en los servicios ofrecidos.
+
+La versión vigente será la que se encuentre publicada en la página web.`,
       },
     ],
     helmet: {
@@ -101,9 +133,9 @@ Asimismo, si considera que el tratamiento de sus datos no se ajusta a la normati
       keywords: {
         name: "keywords",
         content:
-          "política privacidad, protección datos, RGPD, LOPDGDD, AluPVC Barcelona, ventanas PVC, ventanas aluminio, cerramientos, persianas, puertas, reformas, Barcelona",
+          "política de privacidad, RGPD, protección de datos, LOPDGDD, AluPVC Barcelona, ventanas PVC, ventanas aluminio, cerramientos, presupuestos",
       },
-      canonical: `https://alupvcbarcelona.com${PATH}`,
+      canonical: `https://alupvcbarcelona.com/${PATH}`,
     },
   };
 

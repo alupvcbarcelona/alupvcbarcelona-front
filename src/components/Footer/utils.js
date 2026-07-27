@@ -5,11 +5,15 @@ export const year = () => {
 };
 
 export const LINKS_FOOTER = [
-  
   {
     text: "Inicio",
     path: "/",
-  },{
+  },
+  {
+    text: "Aviso legal",
+    path: "/aviso-legal",
+  },
+  {
     text: "Políticas de privacidad",
     path: "/politicas-privacidad",
   },
