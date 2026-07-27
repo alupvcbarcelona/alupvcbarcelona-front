@@ -90,6 +90,10 @@
   margin-bottom: 20px;
 }
 
+.feedback__container {
+  margin-top: 100px;
+}
+
 @media (min-width: 663px) {
   .home__use:nth-child(2) {
     flex-direction: row-reverse;

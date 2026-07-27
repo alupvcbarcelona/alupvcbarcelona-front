@@ -65,11 +65,10 @@ const Home = () => {
         ))}
       </div>
       <div className="photo-gallery__container">
-      <h4>Galería de Fotos</h4>
+        <h4>Galería de Fotos</h4>
         <PhotoGallery />
       </div>
-      <div className="">
-      <h4>¿Que dicen de nosotros?</h4>
+      <div className="feedback__container">
         <ViewFeedback />
       </div>
     </section>
