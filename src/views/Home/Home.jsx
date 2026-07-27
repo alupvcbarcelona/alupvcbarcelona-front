@@ -8,6 +8,7 @@ const PhotoGallery = React.lazy(
 );
 
 import "./Home.css";
+import ViewFeedback from "../../components/Feedback/ViewFeedback";
 
 const Home = () => {
   const content = home_content;
@@ -66,6 +67,10 @@ const Home = () => {
       <div className="photo-gallery__container">
       <h4>Galería de Fotos</h4>
         <PhotoGallery />
+      </div>
+      <div className="">
+      <h4>¿Que dicen de nosotros?</h4>
+        <ViewFeedback />
       </div>
     </section>
   );

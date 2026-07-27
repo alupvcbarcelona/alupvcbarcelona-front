@@ -16,6 +16,7 @@ import Bussiness from './views/Bussiness/Bussiness' */
 import PrivacyPolicy from './views/PrivacyPolicy/PrivacyPolicy'
 /* import EthicsChannel from './views/EthicsChannel/EthicsChannel' */
 import Cookies from './views/Cookies/Cookies'
+import { Feedback } from './views/Feedback/Feedback'
 /* import Partners from './views/Partners/Partners'
 import SoldPack from './views/SoldPacks/SoldPack'
 import UserPacks from './views/UserPacks/UserPacks' */
@@ -30,6 +31,7 @@ const App = () => {
         <Route path={`/politicas-privacidad`} element={<PrivacyPolicy />} />
         {/* <Route path={`/canal-etico`} element={<EthicsChannel />} /> */}
         <Route path={`/politicas-cookies`} element={<Cookies />} />
+        <Route path={`/envia-resena`} element={<Feedback />} />
         {/* <Route path={`/login`} element={<ProtectedRoute requiresAuth={false}><Login /></ProtectedRoute> } />
         <Route path={`/registro`} element={<ProtectedRoute requiresAuth={false}><Register /></ProtectedRoute>} />
         <Route path={`/recuperar-password`} element={<ProtectedRoute requiresAuth={false}><Forgot /></ProtectedRoute>} />
