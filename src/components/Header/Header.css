@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px 50px;
+  padding: 50px 180px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,10 +88,26 @@
   gap: 5px;
 }
 
+@media (max-width: 1259px) {
+
+  .header__container {
+    padding: 50px 100px;;
+  }
+}
+
+@media (max-width: 1050px) {
+
+  .header__container {
+    padding: 50px 50px;
+  }
+}
+
+
 @media (max-width: 609px) {
   .header__container {
     flex-direction: column;
     justify-content: center !important;
+    padding: 50px 20px 40px 20px;
   }
 
   .header__content-action {
