@@ -20,6 +20,10 @@ Correo electrónico: alupvcbarcelona@gmail.com`,
             content: `A través de la página web podrán tratarse los siguientes datos:
 
 - Nombre.
+- Correo electrónico.
+- Teléfono.
+- Dirección postal.
+- Información sobre la consulta o solicitud de presupuesto.
 - Consultas y comunicaciones mantenidas con el cliente.`,
           },
           {
