@@ -30,9 +30,9 @@ const Login = () => {
     dispatchAuth({ type: 'SET_USER', payload: data.user })
     showToast('success', `Bienvenido ${data.user.name}`)
     updateAuthToken(true, data.user.token)
-    setTimeout(() => {
+    /* setTimeout(() => {
       navigate('/')
-    }, 1500)
+    }, 1500) */
   }
 
   return (

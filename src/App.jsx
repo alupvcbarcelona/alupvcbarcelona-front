@@ -35,10 +35,19 @@ const App = () => {
         <Route path={`/politicas-cookies`} element={<Cookies />} />
         <Route path={`/aviso-legal`} element={<Legal />} />
         <Route path={`/envia-resena`} element={<Feedback />} />
-        <Route path={`/login`} element={<Login />} />
+        <Route
+          path={`/login`}
+          element={
+            <ProtectedRoute requiresAuth={false}>
+              <Login />
+            </ProtectedRoute>
+          }
+        />
         <Route
           path={`/presupuesto`}
-          element={<ProtectedRoute requiresAuth={true}>PRESUPUESTO</ProtectedRoute>}
+          element={
+            <ProtectedRoute requiresAuth={true}>PRESUPUESTO</ProtectedRoute>
+          }
         />
 
         {/* <Route
