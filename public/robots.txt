@@ -1,10 +1,8 @@
 User-agent: *
-Disallow: /login/
-Disallow: /register/
-Disallow: /recuperar-password/
-Disallow: /verifica-codigo/
-Disallow: /nueva-contraseña/
-Disallow: /perfil/
-Disallow: /packs/
-Disallow: /negocio/
-Allow: /static/ 
+
+Allow: /
+
+Disallow: /login
+Disallow: /presupuesto
+
+Sitemap: https://alupvcbarcelona.es/sitemap.xml
