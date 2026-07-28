@@ -17,7 +17,6 @@ const Login = () => {
   } = useContext(ReducerContext)
 
   const handleSubmitForm = async (formFields) => {
-    console.log(formFields)
     const { response, data } = await fetchAuth(
       urlApi.URL_LOGIN,
       formFields,
@@ -32,7 +31,7 @@ const Login = () => {
     showToast('success', `Bienvenido ${data.user.name}`)
     updateAuthToken(true, data.token)
     setTimeout(() => {
-      navigate('../perfil')
+      navigate('/')
     }, 1500)
   }
 

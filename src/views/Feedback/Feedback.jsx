@@ -60,7 +60,7 @@ export const Feedback = () => {
       });
       setTimeout(() => {
         navigate("/");
-      }, 3000);
+      }, 1500);
     } catch (error) {
       setMessage(`❌ ${error.message}`);
     } finally {
