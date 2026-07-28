@@ -95,7 +95,7 @@
 }
 
 @media (min-width: 663px) {
-  .home__use:nth-child(2) {
+  .home__use:nth-child(2), .home__use:nth-child(4) {
     flex-direction: row-reverse;
   }
 }

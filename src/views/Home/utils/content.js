@@ -52,7 +52,7 @@ export const home_description = {
       img: {
         img: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924894/IMG_3963_rooz5w.jpg",
         alt: "Instalación de ventanas de aluminio y PVC en Barcelona y el Maresme",
-        width: 350,
+        width: 400,
       },
     },
     {
@@ -81,10 +81,9 @@ export const home_description = {
         },
       ],
       img: {
-        /* img: img_1 */
         img: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924894/IMG_4602_i8wiy1.jpg",
         alt: "Reparación de ventanas de aluminio y PVC en Barcelona",
-        width: 350,
+        width: 400,
       },
     },
     {
@@ -143,7 +142,21 @@ export const home_description = {
       img: {
         img: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924892/WhatsApp_Image_2026-07-24_at_22.25.35_ibsnoy.jpg",
         alt: "Instalación y mantenimiento de ventanas de aluminio y PVC",
-        width: 350,
+        width: 400,
+      },
+    },
+    {
+      title: "Área privada de administración",
+      article: [
+        {
+          paragraph:
+            "AluPVC Barcelona dispone de un área privada destinada exclusivamente al administrador de la empresa para la gestión interna de la actividad. El acceso mediante una cuenta de Google se utiliza únicamente para autenticar al administrador y permitir la gestión de presupuestos, clientes y el envío de presupuestos por correo electrónico de forma segura. Los clientes no necesitan iniciar sesión ni utilizar una cuenta de Google para solicitar información, contactar con la empresa o pedir un presupuesto.",
+        },
+      ],
+      img: {
+        img: "https://res.cloudinary.com/bunzti4y/image/upload/v1785274716/alupvc_bcn_work_pkee23.png",
+        alt: "Área privada de administración de AluPVC Barcelona",
+        width: 400,
       },
     },
   ],
