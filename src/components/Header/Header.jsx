@@ -28,35 +28,48 @@ const Header = () => {
 
   const navbar = optionsNavigate(user, auth);
   const navbarMobile = optionsNavigateMobile(user, auth);
-
   return (
     <header className="header__container filter">
       <div className="header__content-logo">
         <AluPVCLogo />
       </div>
-      <div className="header__content-action">
-        <Button
-          ariaLabel="Whatsapp"
-          p="5px"
-          br="5px"
-          children="Escribeme por Whatsapp"
-          onClick={handleWhatsapp}
-        />
-        <Button
-          ariaLabel="Teléfono"
-          p="5px"
-          br="5px"
-          children="¿Urgente? Llamame"
-          onClick={handleCallPhone}
-        />
-        <Button
-          ariaLabel="Email"
-          p="5px"
-          br="5px"
-          children="¿Presupuesto? envíame correo"
-          onClick={handleEmail}
-        />
-      </div>
+      {!auth ? (
+        <div className="header__content-action">
+          <Button
+            ariaLabel="Whatsapp"
+            p="5px"
+            br="5px"
+            children="Escribeme por Whatsapp"
+            onClick={handleWhatsapp}
+          />
+          <Button
+            ariaLabel="Teléfono"
+            p="5px"
+            br="5px"
+            children="¿Urgente? Llamame"
+            onClick={handleCallPhone}
+          />
+          <Button
+            ariaLabel="Email"
+            p="5px"
+            br="5px"
+            children="¿Presupuesto? envíame correo"
+            onClick={handleEmail}
+          />
+        </div>
+      ) : (
+        <>
+          <div className="header__content-action">
+            <NavLink to="/presupuesto">Crear presupuesto</NavLink>
+            <Button
+              p="5px"
+              br="5px"
+              children="Cerrar sesión"
+              onClick={handleCloseSesion}
+            />
+          </div>
+        </>
+      )}
     </header>
   );
 };

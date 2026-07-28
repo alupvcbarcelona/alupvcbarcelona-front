@@ -99,7 +99,7 @@ const Form = ({ fields, btnText, onSubmit, load }) => {
         {load ? (
           <Loader w={50} h={20} />
         ) : (
-          <Button p="5px" br="5px" onClick={handleSubmitForm}>
+          <Button p="5px" br="5px" onClick={handleSubmitForm} type="submit">
             {btnText}
           </Button>
         )}

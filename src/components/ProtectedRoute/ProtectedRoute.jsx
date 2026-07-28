@@ -1,27 +1,29 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { StateContext } from '../../context/createContext'
-import { useNavigate } from 'react-router-dom'
+import React, { useContext, useEffect, useState } from "react";
+import { StateContext } from "../../context/createContext";
+import { useNavigate } from "react-router-dom";
 
 const protectedRoute = ({ children, requiresAuth }) => {
   const {
-    isAuth: { auth }
-  } = useContext(StateContext)
+    isAuth: { auth },
+  } = useContext(StateContext);
 
-  const navigate = useNavigate()
+  console.log(children, requiresAuth, auth);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (requiresAuth && !auth) {
-      navigate('/')
+      navigate("/");
     } else if (!requiresAuth && auth) {
-      navigate('/perfil')
+      navigate("/presupuesto");
     }
-  }, [auth, navigate, requiresAuth])
+  }, [auth, navigate, requiresAuth]);
 
   if ((requiresAuth && !auth) || (!requiresAuth && auth)) {
-    return null
+    return null;
   }
 
-  return children
-}
+  return children;
+};
 
-export default protectedRoute
+export default protectedRoute;

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import packageJson from "../../../package.json";
 import {
   year,
@@ -11,7 +12,6 @@ import AluPVCLogo from "../Logo/AluPVCLogo";
 import Button from "../Button/Button";
 
 import "./Footer.css";
-import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -38,27 +38,6 @@ const Footer = () => {
               </NavLink>
             ))}
           </div>
-          {/* <Button
-            ariaLabel="Whatsapp"
-            p="5px"
-            br="5px"
-            children="Escribeme por Whatsapp"
-            onClick={handleWhatsapp}
-          />
-          <Button
-            ariaLabel="Teléfono"
-            p="5px"
-            br="5px"
-            children="¿Urgente? Llamame"
-            onClick={handleCallPhone}
-          />
-          <Button
-            ariaLabel="Email"
-            p="5px"
-            br="5px"
-            children="¿Presupuesto? envíame correo"
-            onClick={handleEmail}
-          /> */}
         </div>
       </div>
     </footer>

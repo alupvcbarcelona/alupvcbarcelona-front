@@ -35,15 +35,20 @@ const App = () => {
         <Route path={`/politicas-cookies`} element={<Cookies />} />
         <Route path={`/aviso-legal`} element={<Legal />} />
         <Route path={`/envia-resena`} element={<Feedback />} />
-
+        <Route path={`/login`} element={<Login />} />
         <Route
-          path={`/login`}
+          path={`/presupuesto`}
+          element={<ProtectedRoute requiresAuth={true}>PRESUPUESTO</ProtectedRoute>}
+        />
+
+        {/* <Route
+          path={`/presupuesto`}
           element={
             <ProtectedRoute requiresAuth={false}>
               <Login />
             </ProtectedRoute>
           }
-        />
+        /> */}
         {/* 
         <Route path={`/registro`} element={<ProtectedRoute requiresAuth={false}><Register /></ProtectedRoute>} />
         <Route path={`/recuperar-password`} element={<ProtectedRoute requiresAuth={false}><Forgot /></ProtectedRoute>} />

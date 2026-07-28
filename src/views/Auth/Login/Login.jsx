@@ -29,7 +29,7 @@ const Login = () => {
     }
     dispatchAuth({ type: 'SET_USER', payload: data.user })
     showToast('success', `Bienvenido ${data.user.name}`)
-    updateAuthToken(true, data.token)
+    updateAuthToken(true, data.user.token)
     setTimeout(() => {
       navigate('/')
     }, 1500)
