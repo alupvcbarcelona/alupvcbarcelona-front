@@ -4,7 +4,8 @@ import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import Home from "./views/Home/Home";
 import Layout from "./layout/Layout";
 import Pack from "./views/Pack/Pack";
-/* import Login from './views/Auth/Login/Login'
+import Login from "./views/Auth/Login/Login";
+/*
 import Register from './views/Auth/Register/Register'
 import Forgot from './views/Auth/Forgot/Forgot' */
 import NotFound from "./views/404/NotFound";
@@ -34,7 +35,16 @@ const App = () => {
         <Route path={`/politicas-cookies`} element={<Cookies />} />
         <Route path={`/aviso-legal`} element={<Legal />} />
         <Route path={`/envia-resena`} element={<Feedback />} />
-        {/* <Route path={`/login`} element={<ProtectedRoute requiresAuth={false}><Login /></ProtectedRoute> } />
+
+        <Route
+          path={`/login`}
+          element={
+            <ProtectedRoute requiresAuth={false}>
+              <Login />
+            </ProtectedRoute>
+          }
+        />
+        {/* 
         <Route path={`/registro`} element={<ProtectedRoute requiresAuth={false}><Register /></ProtectedRoute>} />
         <Route path={`/recuperar-password`} element={<ProtectedRoute requiresAuth={false}><Forgot /></ProtectedRoute>} />
         <Route path={`/verifica-codigo`} element={<ProtectedRoute requiresAuth={false}><VerifyToken /></ProtectedRoute>} />

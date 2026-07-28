@@ -11,7 +11,7 @@ const ViewFeedback = () => {
   const getReviews = async () => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_URI_BACKEND}/api/reviews`,
+        `${import.meta.env.VITE_URI_BACKEND}/reviews`,
         {
           method: "GET",
         },

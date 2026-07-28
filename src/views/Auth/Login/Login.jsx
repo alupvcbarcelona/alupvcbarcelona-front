@@ -17,6 +17,7 @@ const Login = () => {
   } = useContext(ReducerContext)
 
   const handleSubmitForm = async (formFields) => {
+    console.log(formFields)
     const { response, data } = await fetchAuth(
       urlApi.URL_LOGIN,
       formFields,
