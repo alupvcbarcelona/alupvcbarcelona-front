@@ -4,8 +4,7 @@ import img_3 from "/ventana_4.jpg";
 
 export const home_content = {
   body: {
-    title:
-      "ALUPVC- Barcelona y Maresme.",
+    title: "ALUPVC- Barcelona y Maresme.",
     description:
       "Nos especializamos en instalación de ventanas, persianas y mosquiteras a medida para viviendas, oficinas y locales comerciales en Barcelona y el Maresme.",
     description_:
@@ -109,6 +108,9 @@ export const home_description = {
                   li: "Mosquiteras para todo tipo de ventanas.",
                 },
                 {
+                  li: "Motorización de persianas.",
+                },
+                {
                   li: "Acabados profesionales con materiales de alta calidad.",
                 },
               ],
@@ -130,6 +132,12 @@ export const home_description = {
                 },
                 {
                   li: "Sustitución de herrajes, cierres, ruedas y mecanismos.",
+                },
+                {
+                  li: "Sustitución de cinta de persiana.",
+                },
+                {
+                  li: "Sustitución de cristales.",
                 },
                 {
                   li: "Mantenimiento preventivo para prolongar la vida útil de la instalación.",
