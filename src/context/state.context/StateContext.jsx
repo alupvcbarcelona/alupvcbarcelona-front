@@ -50,6 +50,7 @@ export const StateProvider = ({ children }) => {
     URL_VERIFY_TOKEN: `${URL_API}/user/comprove-token`,
     /* URL_CREATE_PASSWORD: `${URL_API}/user/create-password`, */
     URL_GET_PROFILE: `${URL_API}/user/profile`,
+    URL_POST_QUOTE: `${URL_API}/quote/create-quote`,
     /* URL_GET_MY_PACKS: `${URL_API}/use-pack/my-packs`,
     URL_GET_MY_PARTNER_PACKS: `${URL_API}/pack/get-packs`,
     URL_PACKS_BUSSINESS: `${URL_API}/pack/get-packs`,

@@ -19,6 +19,7 @@ import PrivacyPolicy from "./views/PrivacyPolicy/PrivacyPolicy";
 import Cookies from "./views/Cookies/Cookies";
 import { Feedback } from "./views/Feedback/Feedback";
 import Legal from "./views/LegalInformation/Legal";
+import Quote from "./views/Quote/Quote";
 /* import Partners from './views/Partners/Partners'
 import SoldPack from './views/SoldPacks/SoldPack'
 import UserPacks from './views/UserPacks/UserPacks' */
@@ -46,7 +47,9 @@ const App = () => {
         <Route
           path={`/presupuesto`}
           element={
-            <ProtectedRoute requiresAuth={true}>PRESUPUESTO</ProtectedRoute>
+            <ProtectedRoute requiresAuth={true}>
+              <Quote />
+            </ProtectedRoute>
           }
         />
 
