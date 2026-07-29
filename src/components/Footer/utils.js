@@ -20,11 +20,11 @@ export const LINKS_FOOTER = [
   {
     text: "Políticas de cookies",
     path: "/politicas-cookies",
-  },
+  },/* 
   {
     text: "Login",
     path: "/login",
-  },
+  }, */
 
   /* {
     text: 'Canal ético',
