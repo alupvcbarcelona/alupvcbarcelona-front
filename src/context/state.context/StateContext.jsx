@@ -42,24 +42,12 @@ export const StateProvider = ({ children }) => {
 
   const URL_API = import.meta.env.VITE_URI_BACKEND;
   const [urlApi, setUrlApi] = useState({
-    /*  URL_PARTNERS: `${URL_API}/user/get-partners`,
-    URL_PACK: `${URL_API}/user/packs`, */
     URL_LOGIN: `${URL_API}/user/login`,
-    /*  URL_REGISTER: `${URL_API}/user/register`,
-    URL_FORGOT: `${URL_API}/user/forgot-password`, */
     URL_VERIFY_TOKEN: `${URL_API}/user/comprove-token`,
-    /* URL_CREATE_PASSWORD: `${URL_API}/user/create-password`, */
     URL_GET_PROFILE: `${URL_API}/user/profile`,
     URL_POST_QUOTE: `${URL_API}/quote/create-quote`,
-    /* URL_GET_MY_PACKS: `${URL_API}/use-pack/my-packs`,
-    URL_GET_MY_PARTNER_PACKS: `${URL_API}/pack/get-packs`,
-    URL_PACKS_BUSSINESS: `${URL_API}/pack/get-packs`,
-    URL_USE_PACK_CUSTOMER: `${URL_API}/use-pack/use-pack`,
-    URL_CREATE_PACK: `${URL_API}/pack/create-pack`,
-    URL_ASSIGN_PACK: `${URL_API}/use-pack/add-pack`,
-    URL_CHANGE_STATE_PACK: `${URL_API}/pack/state-pack`,
-    URL_GET_MY_SOLD_PACKS: `${URL_API}/pack/get-my-use-packs`,
-    URL_CHANGE_MY_ROLE: `${URL_API}/user/change-role` */
+    URL_GET_QUOTES: `${URL_API}/quote/get-quotes`,
+    URL_GET_QUOTE: `${URL_API}/quote/get-quote/:id`,
   });
 
   const showToast = (type, message) => {

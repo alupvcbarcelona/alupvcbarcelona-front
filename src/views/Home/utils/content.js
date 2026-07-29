@@ -1,7 +1,3 @@
-import img_1 from "/ventana_2.jpg";
-import img_2 from "/ventana_3.jpg";
-import img_3 from "/ventana_4.jpg";
-
 export const home_content = {
   body: {
     title: "ALUPVC- Barcelona y Maresme.",

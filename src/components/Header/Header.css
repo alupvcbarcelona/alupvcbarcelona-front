@@ -5,7 +5,7 @@
   width: 100%;
   padding: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid black;
   z-index: 20;
@@ -14,7 +14,6 @@
 
 .header__content-action {
   display: flex;
-  flex-direction: column;
   gap: 1rem;
 }
 

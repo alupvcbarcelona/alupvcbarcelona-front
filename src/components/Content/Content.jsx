@@ -1,9 +1,6 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import Img from '../Img/Img'
 import './Content.css'
-import email from '/mail.svg'
-import map from '/map.svg'
-import whatsapp from '/whatsapp.svg'
 
 const Content = ({ element }) => {
   if (!element) return

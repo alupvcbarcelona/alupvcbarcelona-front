@@ -6,8 +6,6 @@ import { optionsNavigate, optionsNavigateMobile } from "./utils/content";
 import { handleGoHome } from "./utils/functions";
 import Img from "../Img/Img";
 import "./Header.css";
-import menu from "/menu.svg";
-import login from "/login.svg";
 import AluPVCLogo from "../Logo/AluPVCLogo";
 import { handleCallPhone, handleEmail, handleWhatsapp } from "../Footer/utils";
 const Button = React.lazy(() => import("../Button/Button"));

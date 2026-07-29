@@ -101,17 +101,17 @@
 }
 
 .quote__button--add {
-    background: #0d6efd;
+    background: var(--p-bg-secondary);
     color: white;
 }
 
 .quote__button--delete {
-    background: #dc3545;
+    background: var(--p-bg-tertiary);
     color: white;
 }
 
 .quote__button--submit {
-    background: #198754;
+    background: var(--p-bg-tertiary_green);
     color: white;
     min-width: 220px;
 }

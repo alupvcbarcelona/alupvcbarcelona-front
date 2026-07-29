@@ -1,11 +1,3 @@
-import login from '/login.svg'
-import profile from '/profile.svg'
-import register from '/register.svg'
-import home from '/home.svg'
-import box from '/box.svg'
-import bussiness from '/bussiness.svg'
-import partner from '/partners.svg'
-
 export const optionsNavigate = (user, auth) => {  
   if (!auth) {
     return [
