@@ -3,6 +3,7 @@ import "./Button.css";
 const Button = ({
   children,
   icon,
+  alt,
   ariaLabel,
   bgColor = "var(--p-bg-secondary)",
   textColor = "var(--p-text-primary_2)",
@@ -33,7 +34,11 @@ const Button = ({
       }}
       {...props}
     >
-      {icon && <span className="button__icon">{icon}</span>}
+      {icon && (
+        <span className="button__icon">
+          <img src={icon} alt={alt} />
+        </span>
+      )}
 
       {children && <span className="button__text">{children}</span>}
     </button>

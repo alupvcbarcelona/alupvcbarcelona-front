@@ -32,11 +32,13 @@ const ViewFeedback = () => {
       <div className="reviews-slider">
         {reviews.map((review) => (
           <div className="review-card" key={review._id}>
-            <div className="review-stars">{"⭐".repeat(review.stars)}</div>
+            <div>
+              <div className="review-stars">{"⭐".repeat(review.stars)}</div>
 
-            <h3>{review.title}</h3>
+              <h3>{review.title}</h3>
 
-            <p>{review.description}</p>
+              <p>{review.description}</p>
+            </div>
 
             <span className="review-user">— {review.username}</span>
           </div>

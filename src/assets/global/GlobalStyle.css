@@ -3,7 +3,7 @@
   --p-bg-primary: #ffffff;
   --p-bg-secondary: #1c1087;
   --p-bg-tertiary: #9e161b;
-  --p-bg-tertiary_green: #19af20;
+  --p-bg-tertiary_green: #16bb1fc0;
   --p-bg-quaternary: #c2c2c2;
   --p-bg-black: #3d3d3d;
 
@@ -175,17 +175,17 @@ footer {
   h3,
   h4,
   h5 {
-    font-size: var(--p-font-size-m);
+    font-size: var(--p-font-size-l);
   }
 
   p,
   li,
   a {
-    font-size: var(--p-font-size-s);
+    font-size: var(--p-font-size-m);
   }
 
   button {
-    font-size: var(--p-font-size-xs);
+    font-size: var(--p-font-size-s);
 
   }
 

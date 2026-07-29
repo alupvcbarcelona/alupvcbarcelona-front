@@ -1,6 +1,5 @@
 .view-feedback {
   width: 100%;
-  padding: 4rem 2rem;
 }
 
 .view-feedback h2 {
@@ -47,6 +46,9 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
 
   transition: .3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .review-card:hover {
