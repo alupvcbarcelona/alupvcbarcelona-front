@@ -5,14 +5,14 @@ import img_3 from "/ventana_4.jpg";
 export const home_content = {
   body: {
     title:
-      "Instalación y reparación de ventanas de aluminio y PVC en Barcelona y el Maresme",
+      "ALUPVC- Barcelona y Maresme.",
     description:
-      "Especialistas en ventanas, persianas y mosquiteras a medida para viviendas, oficinas y locales comerciales.",
+      "Nos especializamos en instalación de ventanas, persianas y mosquiteras a medida para viviendas, oficinas y locales comerciales en Barcelona y el Maresme.",
     description_:
       "Instalamos, reparamos y realizamos el mantenimiento de ventanas de aluminio y PVC, persianas y mosquiteras, incluso si fueron instaladas por otra empresa.",
     helmet: {
       title:
-        "Instalación y Reparación de Ventanas de Aluminio y PVC en Barcelona y el Maresme | AluPVC Barcelona",
+        "ALUPVC- Barcelona y Maresme. Instalación y Reparación de Ventanas de Aluminio y PVC en Barcelona y el Maresme | AluPVC Barcelona",
       description: {
         name: "description",
         content:

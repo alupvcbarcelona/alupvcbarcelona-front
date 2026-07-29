@@ -33,42 +33,16 @@ const Header = () => {
       <div className="header__content-logo">
         <AluPVCLogo />
       </div>
-      {!auth ? (
+      {auth && (
         <div className="header__content-action">
+          <NavLink to="/presupuesto">Crear presupuesto</NavLink>
           <Button
-            ariaLabel="Whatsapp"
             p="5px"
             br="5px"
-            children="Escribeme por Whatsapp"
-            onClick={handleWhatsapp}
-          />
-          <Button
-            ariaLabel="Teléfono"
-            p="5px"
-            br="5px"
-            children="¿Urgente? Llamame"
-            onClick={handleCallPhone}
-          />
-          <Button
-            ariaLabel="Email"
-            p="5px"
-            br="5px"
-            children="¿Presupuesto? envíame correo"
-            onClick={handleEmail}
+            children="Cerrar sesión"
+            onClick={handleCloseSesion}
           />
         </div>
-      ) : (
-        <>
-          <div className="header__content-action">
-            <NavLink to="/presupuesto">Crear presupuesto</NavLink>
-            <Button
-              p="5px"
-              br="5px"
-              children="Cerrar sesión"
-              onClick={handleCloseSesion}
-            />
-          </div>
-        </>
       )}
     </header>
   );

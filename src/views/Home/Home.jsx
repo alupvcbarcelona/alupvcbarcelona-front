@@ -33,7 +33,7 @@ const Home = () => {
                         <div key={`desc-${descIndex}`}>
                           <h3>{desc.title}</h3>
                           {desc.ul && (
-                            <ul>
+                            <ul className="home__list">
                               {desc.ul.map((li, liIndex) => (
                                 <li key={`desc-li-${liIndex}`}>{li.li}</li>
                               ))}
@@ -44,7 +44,7 @@ const Home = () => {
                     </div>
                   )}
                   {article.ol && (
-                    <ol>
+                    <ol className="home__list">
                       {article.ol.map((li, olIndex) => (
                         <li key={`ol-li-${olIndex}`}>{li.li}</li>
                       ))}

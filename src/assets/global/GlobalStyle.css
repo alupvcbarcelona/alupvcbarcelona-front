@@ -35,7 +35,8 @@
 }
 
 html {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
   scroll-behavior: smooth;
   color: var(--p-text-primary);
   user-select: none;
@@ -104,6 +105,7 @@ footer {
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -120,6 +122,7 @@ footer {
     opacity: 0;
     scale: 50%;
   }
+
   to {
     opacity: 1;
     scale: 100%;
@@ -165,6 +168,7 @@ footer {
 }
 
 @media (max-width: 509px) {
+
   h1,
   h2,
   h3,
@@ -180,9 +184,9 @@ footer {
   }
 
   button {
-  font-size: var(--p-font-size-xs);
-  
-}
+    font-size: var(--p-font-size-xs);
+
+  }
 
 }
 
@@ -194,5 +198,6 @@ footer {
 }
 
 .Toastify__toast {
-  border-radius: 8px; /* Bordes redondeados */
+  border-radius: 8px;
+  /* Bordes redondeados */
 }
