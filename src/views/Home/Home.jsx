@@ -1,6 +1,10 @@
 import React from "react";
 import { home_content, home_description } from "./utils/content";
-
+import {
+  handleCallPhone,
+  handleEmail,
+  handleWhatsapp,
+} from "../../components/Footer/utils";
 const Img = React.lazy(() => import("../../components/Img/Img"));
 const Content = React.lazy(() => import("../../components/Content/Content"));
 const PhotoGallery = React.lazy(
@@ -9,6 +13,7 @@ const PhotoGallery = React.lazy(
 
 import "./Home.css";
 import ViewFeedback from "../../components/Feedback/ViewFeedback";
+import Button from "../../components/Button/Button";
 
 const Home = () => {
   const content = home_content;
@@ -18,50 +23,84 @@ const Home = () => {
     <section className="home__content fadeIn">
       <div>
         <Content element={content} />
+        <div className="btn-actions">
+          <Button
+            p="5px"
+            br="5px"
+            children="Contactanos"
+            onClick={handleEmail}
+          />
+          <Button
+            p="5px"
+            br="5px"
+            children="Llamanos"
+            onClick={handleCallPhone}
+          />
+        </div>
       </div>
       <div className="home__section">
         {description?.body.map((item, index) => (
-          <div key={`section-${index}`} className="home__use">
-            <div>
-              <h2>{item?.title}</h2>
-              {item.article.map((article, articleIndex) => (
-                <article key={`article-${articleIndex}`}>
-                  <p>{article.paragraph}</p>
-                  {article.description_ && (
-                    <div className="home__bussiness-type">
-                      {article.description_.map((desc, descIndex) => (
-                        <div key={`desc-${descIndex}`}>
-                          <h3>{desc.title}</h3>
-                          {desc.ul && (
-                            <ul className="home__list">
-                              {desc.ul.map((li, liIndex) => (
-                                <li key={`desc-li-${liIndex}`}>{li.li}</li>
-                              ))}
-                            </ul>
-                          )}
+          <>
+            <div key={`section-${index}`} className="home__use">
+              <div>
+                <h2>{item?.title}</h2>
+                {item.article.map((article, articleIndex) => (
+                  <>
+                    <article key={`article-${articleIndex}`}>
+                      <p>{article.paragraph}</p>
+                      {article.description_ && (
+                        <div className="home__bussiness-type">
+                          {article.description_.map((desc, descIndex) => (
+                            <div key={`desc-${descIndex}`}>
+                              <h3>{desc.title}</h3>
+                              {desc.ul && (
+                                <ul className="home__list">
+                                  {desc.ul.map((li, liIndex) => (
+                                    <li key={`desc-li-${liIndex}`}>{li.li}</li>
+                                  ))}
+                                </ul>
+                              )}
+                            </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
-                  )}
-                  {article.ol && (
-                    <ol className="home__list">
-                      {article.ol.map((li, olIndex) => (
-                        <li key={`ol-li-${olIndex}`}>{li.li}</li>
-                      ))}
-                    </ol>
-                  )}
-                </article>
-              ))}
+                      )}
+                      {article.ol && (
+                        <ol className="home__list">
+                          {article.ol.map((li, olIndex) => (
+                            <li key={`ol-li-${olIndex}`}>{li.li}</li>
+                          ))}
+                        </ol>
+                      )}
+                    </article>
+                    {item.btn && (
+                      <div className="btn-actions">
+                        <Button
+                          p="5px"
+                          br="5px"
+                          children="Contactanos"
+                          onClick={handleEmail}
+                        />
+                        <Button
+                          p="5px"
+                          br="5px"
+                          children="Llamanos"
+                          onClick={handleCallPhone}
+                        />
+                      </div>
+                    )}
+                  </>
+                ))}
+              </div>
+              <div>
+                <Img
+                  icon={item.img.img}
+                  br="20px"
+                  alt={item.img.alt}
+                  w={item.img.width}
+                />
+              </div>
             </div>
-            <div>
-              <Img
-                icon={item.img.img}
-                br="20px"
-                alt={item.img.alt}
-                w={item.img.width}
-              />
-            </div>
-          </div>
+          </>
         ))}
       </div>
       <div className="photo-gallery__container">

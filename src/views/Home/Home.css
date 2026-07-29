@@ -117,6 +117,13 @@
   margin-top: 10rem;
 }
 
+.btn-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap:1rem;
+}
+
 @media (max-width: 1000px) {
   .home__content {
     padding: 50px 30px;

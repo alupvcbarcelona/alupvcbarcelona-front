@@ -5,7 +5,7 @@ export const home_content = {
       "Nos especializamos en instalación de ventanas, persianas y mosquiteras a medida para viviendas, oficinas y locales comerciales en Barcelona y el Maresme.",
     description_:
       "Instalamos, reparamos y realizamos el mantenimiento de ventanas de aluminio y PVC, persianas y mosquiteras, incluso si fueron instaladas por otra empresa.",
-    helmet: {
+      helmet: {
       title:
         "ALUPVC- Barcelona y Maresme. Instalación y Reparación de Ventanas de Aluminio y PVC en Barcelona y el Maresme | AluPVC Barcelona",
       description: {
@@ -44,6 +44,7 @@ export const home_description = {
           paragraph: "• Oficinas y despachos.",
         },
       ],
+      btn: false,
       img: {
         img: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924894/IMG_3963_rooz5w.jpg",
         alt: "Instalación de ventanas de aluminio y PVC en Barcelona y el Maresme",
@@ -75,6 +76,7 @@ export const home_description = {
           ],
         },
       ],
+      btn: true,
       img: {
         img: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924894/IMG_4602_i8wiy1.jpg",
         alt: "Reparación de ventanas de aluminio y PVC en Barcelona",
@@ -143,6 +145,7 @@ export const home_description = {
           ],
         },
       ],
+      btn: true,
       img: {
         img: "https://res.cloudinary.com/bunzti4y/image/upload/v1784924892/WhatsApp_Image_2026-07-24_at_22.25.35_ibsnoy.jpg",
         alt: "Instalación y mantenimiento de ventanas de aluminio y PVC",
@@ -157,6 +160,7 @@ export const home_description = {
             "AluPVC Barcelona dispone de un área privada destinada exclusivamente al administrador de la empresa para la gestión interna de la actividad. El acceso mediante una cuenta de Google se utiliza únicamente para autenticar al administrador y permitir la gestión de presupuestos, clientes y el envío de presupuestos por correo electrónico de forma segura. Los clientes no necesitan iniciar sesión ni utilizar una cuenta de Google para solicitar información, contactar con la empresa o pedir un presupuesto.",
         },
       ],
+      btn: false,
       img: {
         img: "https://res.cloudinary.com/bunzti4y/image/upload/v1785274716/alupvc_bcn_work_pkee23.png",
         alt: "Área privada de administración de AluPVC Barcelona",

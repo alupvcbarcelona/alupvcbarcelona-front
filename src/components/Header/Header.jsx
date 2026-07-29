@@ -2,8 +2,6 @@ import React, { useContext } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import useWidth from "../../hooks/useWidth";
 import { ReducerContext, StateContext } from "../../context/createContext";
-import { handleGoHome } from "./utils/functions";
-import Img from "../Img/Img";
 import "./Header.css";
 import AluPVCLogo from "../Logo/AluPVCLogo";
 import { handleCallPhone, handleEmail, handleWhatsapp } from "../Footer/utils";
