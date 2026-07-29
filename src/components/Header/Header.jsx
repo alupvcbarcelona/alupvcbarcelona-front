@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import useWidth from "../../hooks/useWidth";
 import { ReducerContext, StateContext } from "../../context/createContext";
-import { optionsNavigate, optionsNavigateMobile } from "./utils/content";
 import { handleGoHome } from "./utils/functions";
 import Img from "../Img/Img";
 import "./Header.css";
@@ -24,8 +23,6 @@ const Header = () => {
     auth: { user },
   } = useContext(ReducerContext);
 
-  const navbar = optionsNavigate(user, auth);
-  const navbarMobile = optionsNavigateMobile(user, auth);
   return (
     <header className="header__container filter">
       <div className="header__content-logo">

@@ -1,4 +1,4 @@
-export const optionsNavigate = (user, auth) => {  
+/* export const optionsNavigate = (user, auth) => {  
   if (!auth) {
     return [
       {
@@ -157,3 +157,4 @@ export const optionsNavigateMobile = (user, auth) => {
     ]
   }
 }
+ */
