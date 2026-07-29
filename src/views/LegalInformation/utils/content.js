@@ -11,7 +11,7 @@ NIF: 60428129E
 Domicilio profesional: Calle Bergantí Caupolicán, número 30, El Masnou, Barcelona
 Teléfono: 631 95 73 78
 Correo electrónico: alupvcbarcelona@gmail.com
-Página web: [DOMINIO WEB]
+Página web: https://alupvcbarcelona.com
 Actividad: Fabricación, suministro e instalación de ventanas, cerramientos y otros elementos de carpintería metálica y aluminio.`,
       },
       {
