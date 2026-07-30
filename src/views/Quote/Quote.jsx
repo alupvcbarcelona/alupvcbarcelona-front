@@ -1,11 +1,21 @@
 import React, { useContext, useState } from "react";
-import { StateContext } from "../../context/createContext";
+import { ReducerContext, StateContext } from "../../context/createContext";
 import { makeFetch } from "../../services/fetch";
 
 import "./Quote.css";
 
 const Quote = () => {
-  const { urlApi, showToast } = useContext(StateContext);
+  const {
+    urlApi,
+    isAuth: { existToken },
+    showToast,
+  } = useContext(StateContext);
+  const {
+    auth: user,
+    load: { load },
+    dispatchLoad,
+    dispatchAuth,
+  } = useContext(ReducerContext);
 
   const [formFields, setFormFields] = useState({
     type: "presupuesto",
@@ -86,6 +96,7 @@ const Quote = () => {
       url: urlApi.URL_POST_QUOTE,
       formFields,
       method: "POST",
+      token: existToken,
     });
 
     if (response.status !== 200 && response.status !== 201) {
@@ -173,7 +184,13 @@ const Quote = () => {
           <hr className="quote__divider" />
 
           <div className="quote__items-header">
-            <h4 className="quote__section-title">Conceptos</h4>
+            <div>
+              <h4 className="quote__section-title">Conceptos</h4>
+              <i>
+                Introduce la cantidad, la descripción del servicio y el precio{" "}
+                <b style={{ color: "var(--p-text-secondary)" }}>sin iva.</b>
+              </i>
+            </div>
 
             <button
               type="button"
@@ -188,7 +205,7 @@ const Quote = () => {
             <div className="quote__item" key={index}>
               <input
                 className="quote__input quote__input--small"
-                type="number"
+                type="text"
                 name="quantity"
                 placeholder="Cantidad"
                 value={item.quantity}
