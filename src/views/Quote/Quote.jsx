@@ -3,6 +3,7 @@ import { ReducerContext, StateContext } from "../../context/createContext";
 import { makeFetch } from "../../services/fetch";
 
 import "./Quote.css";
+import Loader from "../../components/Loader/Loader";
 
 const Quote = () => {
   const {
@@ -92,6 +93,33 @@ const Quote = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const { client, items, observations } = formFields;
+
+    // Validar cliente
+    if (
+      !client.name.trim() ||
+      !client.address.trim() ||
+      !client.postalCode.trim() ||
+      !client.nif.trim() ||
+      !client.email.trim()
+    ) {
+      showToast("error", "Debes rellenar todos los datos del cliente.");
+      return;
+    }
+
+    // Validar conceptos
+    const hasInvalidItem = items.some(
+      (item) =>
+        item.quantity <= 0 || !item.description.trim() || item.unitPrice <= 0,
+    );
+
+    if (hasInvalidItem) {
+      showToast("error", "Todos los conceptos deben estar completos.");
+      return;
+    }
+
+    dispatchLoad({ type: "LOAD_TRUE" });
+
     const { response, data } = await makeFetch({
       url: urlApi.URL_POST_QUOTE,
       formFields,
@@ -99,13 +127,15 @@ const Quote = () => {
       token: existToken,
     });
 
+    dispatchLoad({ type: "LOAD_FALSE" });
+
     if (response.status !== 200 && response.status !== 201) {
       showToast("error", data.message);
       return;
     }
 
     showToast("success", "Presupuesto enviado correctamente");
-    // Reset form fields
+
     setFormFields({
       type: "presupuesto",
       client: {
@@ -125,6 +155,17 @@ const Quote = () => {
       observations: "",
     });
   };
+
+  const isFormValid =
+    formFields.client.name.trim() &&
+    formFields.client.address.trim() &&
+    formFields.client.postalCode.trim() &&
+    formFields.client.nif.trim() &&
+    formFields.client.email.trim() &&
+    formFields.items.every(
+      (item) =>
+        item.quantity > 0 && item.description.trim() && item.unitPrice > 0,
+    );
 
   return (
     <div className="quote">
@@ -252,14 +293,18 @@ const Quote = () => {
             value={formFields.observations}
             onChange={handleObservationChange}
           />
-
           <div className="quote__actions">
-            <button
-              type="submit"
-              className="quote__button quote__button--submit"
-            >
-              Enviar presupuesto
-            </button>
+            {load ? (
+              <Loader />
+            ) : (
+              <button
+                type="submit"
+                className="quote__button quote__button--submit"
+                disabled={!isFormValid}
+              >
+                Enviar presupuesto
+              </button>
+            )}
           </div>
         </form>
       </div>
