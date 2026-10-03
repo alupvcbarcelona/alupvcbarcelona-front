@@ -49,8 +49,8 @@ const Dashboard = () => {
       <div className="stats">
         <Stat label="Solicitudes nuevas" value={number(s.messages.unread)} hint="pendientes de leer" icon={Inbox} to="/admin/solicitudes" />
         <Stat label="Visitas (30 días)" value={number(s.visits.last30)} hint={`${number(s.visits.visitors30)} visitantes únicos`} icon={MousePointerClick} to="/admin/analitica" />
-        <Stat label="Presupuestos abiertos" value={money(s.quotes.openAmount)} hint={`${s.quotes.open} presupuestos${s.quotes.acceptanceRate !== null ? ` · ${s.quotes.acceptanceRate}% aceptados este año` : ""}`} icon={FileText} to="/admin/presupuestos" />
-        <Stat label="Pendiente de cobro" value={money(s.invoices.pendingAmount)} hint={`${s.invoices.pending} facturas`} icon={Receipt} to="/admin/facturas?estado=pendiente" />
+        <Stat label="Presupuestos abiertos" value={money(s.quotes.openAmount)} hint={`${s.quotes.open} ${s.quotes.open === 1 ? "presupuesto" : "presupuestos"}${s.quotes.acceptanceRate !== null ? ` · ${s.quotes.acceptanceRate}% aceptados este año` : ""}`} icon={FileText} to="/admin/presupuestos" />
+        <Stat label="Pendiente de cobro" value={money(s.invoices.pendingAmount)} hint={`${s.invoices.pending} ${s.invoices.pending === 1 ? "factura" : "facturas"}`} icon={Receipt} to="/admin/facturas?estado=pendiente" />
       </div>
 
       <div className="admin-grid">
@@ -95,7 +95,7 @@ const Dashboard = () => {
             x="month"
             series={[{ key: "invoiced", label: "Facturado" }, { key: "paid", label: "Cobrado" }]}
             formatX={(m, long) => (long ? new Date(2000, m - 1).toLocaleDateString("es-ES", { month: "long" }) : MONTHS[m - 1])}
-            format={(v, axis) => (axis ? `${number(Math.round(v / 1000))}k` : money(v))}
+            format={(v, axis) => (axis ? (v >= 1000 ? `${(v / 1000).toLocaleString("es-ES", { maximumFractionDigits: 1 })}k` : number(v)) : money(v))}
           />
         </Card>
 
