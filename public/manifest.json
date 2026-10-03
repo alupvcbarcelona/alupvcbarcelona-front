@@ -1,0 +1,9 @@
+{
+  "name": "AluPVC Barcelona",
+  "short_name": "AluPVC",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1f2f6b",
+  "icons": [{ "src": "/logo.png", "sizes": "512x512", "type": "image/png" }]
+}

@@ -1,8 +1,5 @@
 User-agent: *
-
 Allow: /
-
-Disallow: /login
-Disallow: /presupuesto
+Disallow: /admin
 
 Sitemap: https://alupvcbarcelona.es/sitemap.xml

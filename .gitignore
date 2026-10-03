@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 .package-lock.json
 .history
+# Local env
+.env.local
+.env.*.local

@@ -1,22 +1,30 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
-import { ReducerProvider } from './context/reducer.context/ReducerContext.jsx'
-import { StateProvider } from './context/state.context/StateContext.jsx'
-import App from './App.jsx'
-import './assets/global/GlobalStyle.css'
-import { ScrollProvider } from './context/scroll.context/Scroll.jsx'
+import { StrictMode, Suspense } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "@fontsource-variable/inter";
+import "./styles/tokens.css";
+import "./styles/base.css";
+import "./styles/ui.css";
+import "./styles/site.css";
+import "./styles/admin.css";
+import App from "./App";
+import { AuthProvider } from "./context/AuthContext";
+import { CompanyProvider } from "./context/CompanyContext";
+import { PageLoader } from "./components/ui";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <ReducerProvider>
-        <StateProvider>
-          <ScrollProvider>
+      <CompanyProvider>
+        <AuthProvider>
+          <Suspense fallback={<PageLoader />}>
             <App />
-          </ScrollProvider>
-        </StateProvider>
-      </ReducerProvider>
+          </Suspense>
+          <ToastContainer position="bottom-right" hideProgressBar autoClose={3500} />
+        </AuthProvider>
+      </CompanyProvider>
     </BrowserRouter>
-  </StrictMode>
-)
+  </StrictMode>,
+);
