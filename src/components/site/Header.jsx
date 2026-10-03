@@ -26,46 +26,51 @@ const Header = () => {
   }, [open]);
 
   return (
-    <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
-      <div className="container site-header__inner">
-        <Logo />
+    <>
+      <header className={`site-header ${scrolled ? "is-scrolled" : ""} ${open ? "is-open" : ""}`}>
+        <div className="container site-header__inner">
+          <Logo />
 
-        <nav className="site-nav" aria-label="Principal">
-          {NAV.map((item) => (
-            <NavLink key={item.to} to={item.to} end={item.end} className="site-nav__link">
-              {item.label}
-            </NavLink>
-          ))}
-        </nav>
+          <nav className="site-nav" aria-label="Principal">
+            {NAV.map((item) => (
+              <NavLink key={item.to} to={item.to} end={item.end} className="site-nav__link">
+                {item.label}
+              </NavLink>
+            ))}
+          </nav>
 
-        <div className="site-header__actions">
-          <a href={`tel:${company.phone.replace(/\s/g, "")}`} className="site-header__phone">
-            <Phone aria-hidden="true" />
-            {company.phone}
-          </a>
-          <Button to="/contacto" size="sm">Pedir presupuesto</Button>
-          <button className="site-header__toggle" onClick={() => setOpen((v) => !v)} aria-expanded={open} aria-label={open ? "Cerrar menú" : "Abrir menú"}>
-            {open ? <X /> : <Menu />}
-          </button>
-        </div>
-      </div>
-
-      <div className={`mobile-nav ${open ? "is-open" : ""}`} hidden={!open}>
-        <nav className="container" aria-label="Menú móvil">
-          {NAV.map((item) => (
-            <NavLink key={item.to} to={item.to} end={item.end} className="mobile-nav__link">
-              {item.label}
-            </NavLink>
-          ))}
-          <div className="mobile-nav__cta">
-            <Button to="/contacto" block size="lg">Pedir presupuesto</Button>
-            <Button href={`tel:${company.phone.replace(/\s/g, "")}`} variant="secondary" block size="lg" icon={Phone}>
+          <div className="site-header__actions">
+            <a href={`tel:${company.phone.replace(/\s/g, "")}`} className="site-header__phone">
+              <Phone aria-hidden="true" />
               {company.phone}
-            </Button>
+            </a>
+            <Button to="/contacto" size="sm">Pedir presupuesto</Button>
+            <button className="site-header__toggle" onClick={() => setOpen((v) => !v)} aria-expanded={open} aria-controls="menu-movil" aria-label={open ? "Cerrar menú" : "Abrir menú"}>
+              {open ? <X /> : <Menu />}
+            </button>
           </div>
-        </nav>
-      </div>
-    </header>
+        </div>
+      </header>
+
+      {/* FUERA DEL <header>: su backdrop-filter haría que position:fixed se recortara a la cabecera */}
+      {open && (
+        <div className="mobile-nav" id="menu-movil">
+          <nav className="container" aria-label="Menú móvil">
+            {NAV.map((item) => (
+              <NavLink key={item.to} to={item.to} end={item.end} className="mobile-nav__link" onClick={() => setOpen(false)}>
+                {item.label}
+              </NavLink>
+            ))}
+            <div className="mobile-nav__cta">
+              <Button to="/contacto" block size="lg" onClick={() => setOpen(false)}>Pedir presupuesto</Button>
+              <Button href={`tel:${company.phone.replace(/\s/g, "")}`} variant="secondary" block size="lg" icon={Phone}>
+                {company.phone}
+              </Button>
+            </div>
+          </nav>
+        </div>
+      )}
+    </>
   );
 };
 

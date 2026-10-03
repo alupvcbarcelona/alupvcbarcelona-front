@@ -38,7 +38,9 @@
 .site-header__toggle { display: none; width: 40px; height: 40px; place-items: center; border-radius: var(--radius-sm); color: var(--ink); }
 .site-header__toggle:hover { background: var(--bg-muted); }
 
-.mobile-nav { position: fixed; inset: var(--header-h) 0 0; background: var(--bg); padding: var(--space-4) 0 var(--space-6); overflow-y: auto; border-top: 1px solid var(--line); }
+.mobile-nav { position: fixed; top: var(--header-h); left: 0; right: 0; bottom: 0; z-index: 55; background: var(--bg); padding: var(--space-4) 0 var(--space-6); overflow-y: auto; overscroll-behavior: contain; border-top: 1px solid var(--line); animation: fade 0.15s ease; }
+.site-header.is-open { background: var(--bg); border-bottom-color: var(--line); }
+@media (min-width: 1021px) { .mobile-nav { display: none; } }
 .mobile-nav nav { display: flex; flex-direction: column; }
 .mobile-nav__link { padding: 16px 0; font-size: var(--fs-xl); font-weight: 500; color: var(--ink); border-bottom: 1px solid var(--line); letter-spacing: -0.01em; }
 .mobile-nav__link.active { color: var(--accent); }
