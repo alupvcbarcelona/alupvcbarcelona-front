@@ -35,6 +35,7 @@ export const HELP = [
       "Países y ciudades se obtienen de la dirección IP de la visita (ubicación aproximada).",
       "En «Últimas visitas», la IP aparece completa solo si el visitante aceptó las cookies analíticas; si no, aparece anonimizada (terminada en 0).",
       "Tus propias visitas al panel no se cuentan. Los registros se borran solos a los 13 meses.",
+      "Si ves visitas en un país que no corresponde (por ejemplo Rumanía con clientes de DIGI), pulsa «Corregir ubicaciones»: vuelve a calcular la ubicación de esas visitas. Si te indica que quedan IPs, púlsalo otra vez.",
     ],
   },
   {
@@ -69,6 +70,7 @@ export const HELP = [
       "En «Pendientes» verás las opiniones nuevas. Pulsa «Publicar» para que aparezcan en la web.",
       "Puedes ocultar una reseña publicada en cualquier momento o eliminarla definitivamente.",
       "Para pedir una opinión a un cliente, envíale este enlace: alupvcbarcelona.es/opiniones",
+      "También puedes pedirle una reseña en Google: en la web hay botones «Reseña en Google» (Contacto, Opiniones, Inicio y pie de página). Las reseñas de Google se gestionan desde tu Perfil de Empresa de Google, no desde este panel.",
     ],
   },
   {
@@ -150,7 +152,9 @@ export const HELP = [
     steps: [
       "Los datos de la empresa (nombre, NIF, dirección, teléfono, email) aparecen en la web, en los emails y en los nuevos presupuestos y facturas. Los documentos ya creados conservan los datos que tenían.",
       "Añade el IBAN para que se muestre en las facturas.",
-      "En «Redes sociales» pega tu Instagram (vale @usuario o el enlace). Aparecerá en la web; si lo dejas vacío, se oculta.",
+      "Instagram: en «Redes sociales» escribe tu cuenta. Vale @alupvcbarcelona, instagram.com/alupvcbarcelona o el enlace completo; se corrige solo al guardar.",
+      "Cuando hay Instagram, aparece en la web: debajo de la portada del inicio, en una banda «Más trabajos en Instagram» tras la galería, en Contacto y en el pie de página. Si borras el campo y guardas, desaparece de la web.",
+      "Google: en «Google (Maps y reseñas)» están los enlaces a tu ficha. Para que el cliente vaya directo a escribir la reseña, en tu Perfil de Empresa de Google pulsa «Pedir reseñas», copia el enlace (g.page/r/…/review) y pégalo en «Enlace para dejar reseñas».",
       "Elige el IVA por defecto y escribe las condiciones que quieres que aparezcan en cada presupuesto (validez, forma de pago…).",
       "Cambia tu contraseña regularmente. Cada vez que alguien inicia sesión recibes un email de aviso con la ubicación y el dispositivo.",
     ],
@@ -160,6 +164,7 @@ export const HELP = [
 export const FIRST_STEPS = [
   "Revisa en Ajustes que los datos de la empresa y el IBAN son correctos.",
   "Revisa en Servicios que los servicios y sus textos son los que ofreces.",
+  "Añade tu Instagram y el enlace de reseñas de Google en Ajustes.",
   "Publica tus primeros trabajos con fotos en Trabajos.",
   "Prueba a crear un presupuesto y envíatelo a tu propio email para ver cómo lo recibe el cliente.",
 ];
