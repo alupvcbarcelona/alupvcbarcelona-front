@@ -2,6 +2,7 @@ import { useSearchParams } from "react-router-dom";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import ContactForm from "../../components/site/ContactForm";
 import GoogleLinks from "../../components/site/GoogleLinks";
+import { InstagramIcon, instagramHandle } from "../../components/site/InstagramLink";
 import { useCompany } from "../../context/CompanyContext";
 import { useSeo } from "../../hooks/useDocumentTitle";
 
@@ -33,6 +34,12 @@ const Contact = () => {
               <MessageCircle aria-hidden="true" />
               <div><span>WhatsApp</span><a href={`https://wa.me/${company.whatsapp}`} target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp</a></div>
             </div>
+            {company.instagramUrl && (
+              <div className="contact-info__item">
+                <span style={{ color: "var(--accent)", display: "flex" }}><InstagramIcon size={20} /></span>
+                <div><span>Instagram</span><a href={company.instagramUrl} target="_blank" rel="noopener noreferrer">{instagramHandle(company.instagramUrl)}</a></div>
+              </div>
+            )}
             <div className="contact-info__item">
               <Mail aria-hidden="true" />
               <div><span>Email</span><a href={`mailto:${company.email}`}>{company.email}</a></div>

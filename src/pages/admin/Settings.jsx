@@ -81,6 +81,16 @@ const Settings = () => {
           </div>
         </Card>
 
+        <Card title="Redes sociales" actions={<Button type="submit" size="sm" icon={Save} loading={busy === "company"}>Guardar</Button>}>
+          <Input
+            label="Instagram"
+            value={company.instagramUrl || ""}
+            onChange={set("instagramUrl")}
+            placeholder="@alupvcbarcelona o https://www.instagram.com/alupvcbarcelona/"
+            hint="Si lo rellenas, aparece en la página de inicio, en contacto y en el pie de página. Déjalo vacío para ocultarlo."
+          />
+        </Card>
+
         <Card title="Google (Maps y reseñas)" actions={<Button type="submit" size="sm" icon={Save} loading={busy === "company"}>Guardar</Button>}>
           <div className="grid-2">
             <Input label="Enlace a Google Maps" className="span-2" value={company.googleMapsUrl || ""} onChange={set("googleMapsUrl")} hint="Se muestra como «Ver en Google Maps» / «Cómo llegar» en la web." />

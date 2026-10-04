@@ -8,6 +8,7 @@ import WorkCard from "../../components/site/WorkCard";
 import ReviewCard from "../../components/site/ReviewCard";
 import Lightbox from "../../components/site/Lightbox";
 import GoogleLinks from "../../components/site/GoogleLinks";
+import InstagramLink, { InstagramIcon, instagramHandle } from "../../components/site/InstagramLink";
 import { useApi } from "../../hooks/useApi";
 import { useSeo } from "../../hooks/useDocumentTitle";
 import { useCompany, useServices } from "../../context/CompanyContext";
@@ -76,6 +77,7 @@ const Home = () => {
               <li><Check aria-hidden="true" /> Materiales de primera calidad</li>
               <li><Check aria-hidden="true" /> Reparamos cualquier instalación</li>
             </ul>
+            <div className="hero__social"><InstagramLink variant="text" /></div>
           </div>
           <div className="hero__media fade-up" style={{ animationDelay: "0.1s" }}>
             <img src={cdn(FALLBACK_IMAGES[0], 1100)} alt="Instalación de ventanas de aluminio y PVC en Barcelona y el Maresme" fetchPriority="high" />
@@ -189,6 +191,18 @@ const Home = () => {
                 </button>
               ))}
             </div>
+          )}
+          {company.instagramUrl && (
+            <a href={company.instagramUrl} target="_blank" rel="noopener noreferrer" className="instagram-band" style={{ marginTop: 32 }}>
+              <span className="instagram-band__text">
+                <span className="instagram-band__icon"><InstagramIcon size={24} /></span>
+                <span>
+                  <strong>Más trabajos en Instagram</strong>
+                  <span>Síguenos en {instagramHandle(company.instagramUrl)} para ver nuestros últimos proyectos.</span>
+                </span>
+              </span>
+              <span className="btn btn--secondary btn--sm">Ver Instagram</span>
+            </a>
           )}
         </div>
       </section>

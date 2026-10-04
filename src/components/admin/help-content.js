@@ -150,6 +150,7 @@ export const HELP = [
     steps: [
       "Los datos de la empresa (nombre, NIF, dirección, teléfono, email) aparecen en la web, en los emails y en los nuevos presupuestos y facturas. Los documentos ya creados conservan los datos que tenían.",
       "Añade el IBAN para que se muestre en las facturas.",
+      "En «Redes sociales» pega tu Instagram (vale @usuario o el enlace). Aparecerá en la web; si lo dejas vacío, se oculta.",
       "Elige el IVA por defecto y escribe las condiciones que quieres que aparezcan en cada presupuesto (validez, forma de pago…).",
       "Cambia tu contraseña regularmente. Cada vez que alguien inicia sesión recibes un email de aviso con la ubicación y el dispositivo.",
     ],
