@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Logo from "./Logo";
+import { GoogleG } from "./GoogleLinks";
 import { useCompany, useServices } from "../../context/CompanyContext";
 import { AREA, COMPANY } from "../../config/site";
 import { openCookieSettings } from "../../lib/consent";
@@ -58,6 +59,14 @@ const Footer = () => {
             </li>
           </ul>
           <p className="site-footer__areas">Trabajamos en {AREA}.</p>
+          <div className="site-footer__google">
+            {company.googleMapsUrl && (
+              <a href={company.googleMapsUrl} target="_blank" rel="noopener noreferrer"><MapPin aria-hidden="true" /> Cómo llegar (Google Maps)</a>
+            )}
+            {company.googleReviewUrl && (
+              <a href={company.googleReviewUrl} target="_blank" rel="noopener noreferrer"><GoogleG size={16} /> Déjanos una reseña en Google</a>
+            )}
+          </div>
         </div>
       </div>
 

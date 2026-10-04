@@ -1,6 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import ContactForm from "../../components/site/ContactForm";
+import GoogleLinks from "../../components/site/GoogleLinks";
 import { useCompany } from "../../context/CompanyContext";
 import { useSeo } from "../../hooks/useDocumentTitle";
 
@@ -9,7 +10,7 @@ const Contact = () => {
   const company = useCompany();
   const [params] = useSearchParams();
   const tel = company.phone.replace(/\s/g, "");
-  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${company.address}, ${company.city}`)}`;
+  const mapsUrl = company.googleMapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${company.address}, ${company.city}`)}`;
 
   return (
     <>
@@ -42,6 +43,10 @@ const Contact = () => {
                 <span>Dirección</span>
                 <a href={mapsUrl} target="_blank" rel="noopener noreferrer">{company.address}, {company.city}</a>
               </div>
+            </div>
+            <div>
+              <span className="small muted" style={{ display: "block", marginBottom: 8 }}>Encuéntranos en Google</span>
+              <GoogleLinks size="sm" />
             </div>
           </div>
           <div className="contact-panel">

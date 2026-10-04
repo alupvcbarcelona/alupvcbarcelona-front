@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { CheckCircle2, MessageSquareQuote } from "lucide-react";
 import ReviewCard from "../../components/site/ReviewCard";
+import { GoogleG } from "../../components/site/GoogleLinks";
+import { useCompany } from "../../context/CompanyContext";
 import { Button, Empty, Input, PageLoader, Stars, Textarea } from "../../components/ui";
 import { useApi } from "../../hooks/useApi";
 import { useSeo } from "../../hooks/useDocumentTitle";
@@ -66,6 +68,7 @@ const ReviewForm = () => {
 const Reviews = () => {
   useSeo("Opiniones de clientes", "Opiniones reales de clientes de AluPVC Barcelona sobre la instalación y reparación de ventanas, persianas y mosquiteras.");
   const { data, loading } = useApi("/reviews", { auth: false });
+  const company = useCompany();
   const reviews = data?.data || [];
 
   return (
@@ -90,6 +93,21 @@ const Reviews = () => {
 
       <section className="section" style={{ paddingTop: 56 }}>
         <div className="container">
+          {company.googleReviewUrl && (
+            <div className="google-card" style={{ marginBottom: 32 }}>
+              <div className="google-card__text">
+                <GoogleG size={28} />
+                <div>
+                  <strong>También estamos en Google</strong>
+                  <span>Consulta nuestra ficha o deja tu valoración en Google Maps.</span>
+                </div>
+              </div>
+              <div className="google-links">
+                <Button href={company.googleMapsUrl} target="_blank" rel="noopener noreferrer" variant="secondary" size="sm">Ver ficha</Button>
+                <Button href={company.googleReviewUrl} target="_blank" rel="noopener noreferrer" size="sm">Escribir reseña en Google</Button>
+              </div>
+            </div>
+          )}
           {loading ? (
             <PageLoader />
           ) : reviews.length ? (

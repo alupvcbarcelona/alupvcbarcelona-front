@@ -81,6 +81,13 @@ const Settings = () => {
           </div>
         </Card>
 
+        <Card title="Google (Maps y reseñas)" actions={<Button type="submit" size="sm" icon={Save} loading={busy === "company"}>Guardar</Button>}>
+          <div className="grid-2">
+            <Input label="Enlace a Google Maps" className="span-2" value={company.googleMapsUrl || ""} onChange={set("googleMapsUrl")} hint="Se muestra como «Ver en Google Maps» / «Cómo llegar» en la web." />
+            <Input label="Enlace para dejar reseñas" className="span-2" value={company.googleReviewUrl || ""} onChange={set("googleReviewUrl")} hint="Recomendado: en tu Perfil de Empresa de Google pulsa «Pedir reseñas» y pega aquí el enlace (g.page/r/…/review). Así el cliente va directo a escribir la reseña." />
+          </div>
+        </Card>
+
         <Card title="Presupuestos y facturas" actions={<Button type="submit" size="sm" icon={Save} loading={busy === "company"}>Guardar</Button>}>
           <div className="grid-2">
             <Input label="IBAN para transferencias" value={company.iban || ""} onChange={set("iban")} placeholder="ES00 0000 0000 0000 0000 0000" hint="Aparece en las facturas." />

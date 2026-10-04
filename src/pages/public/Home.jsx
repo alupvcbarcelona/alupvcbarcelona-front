@@ -7,6 +7,7 @@ import ServiceIcon from "../../components/site/ServiceIcon";
 import WorkCard from "../../components/site/WorkCard";
 import ReviewCard from "../../components/site/ReviewCard";
 import Lightbox from "../../components/site/Lightbox";
+import GoogleLinks from "../../components/site/GoogleLinks";
 import { useApi } from "../../hooks/useApi";
 import { useSeo } from "../../hooks/useDocumentTitle";
 import { useCompany, useServices } from "../../context/CompanyContext";
@@ -213,9 +214,12 @@ const Home = () => {
             }
           />
           {reviewList.length > 0 ? (
-            <div className="reviews-grid">
-              {reviewList.map((r) => <ReviewCard key={r._id} review={r} />)}
-            </div>
+            <>
+              <div className="reviews-grid">
+                {reviewList.map((r) => <ReviewCard key={r._id} review={r} />)}
+              </div>
+              <div style={{ marginTop: 24 }}><GoogleLinks size="sm" /></div>
+            </>
           ) : (
             <p className="muted">¿Hemos trabajado para ti? <Link to="/opiniones#escribir" style={{ textDecoration: "underline" }}>Cuéntanos tu experiencia</Link>.</p>
           )}

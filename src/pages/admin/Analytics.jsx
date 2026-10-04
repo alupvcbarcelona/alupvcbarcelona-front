@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
+import { MapPinned } from "lucide-react";
 import { Globe, MonitorSmartphone, MousePointerClick, Users } from "lucide-react";
 import PageHeader from "../../components/admin/PageHeader";
 import { AreaChart, BarList, Stat } from "../../components/admin/Charts";
-import { Card, Empty, PageLoader, Segmented } from "../../components/ui";
+import { Button, Card, Empty, PageLoader, Segmented } from "../../components/ui";
+import { api } from "../../services/api";
 import { useApi } from "../../hooks/useApi";
 import { useSeo } from "../../hooks/useDocumentTitle";
 import { country, dateTime, DEVICE_LABEL, number, percentChange } from "../../lib/format";
@@ -21,15 +24,37 @@ const Analytics = () => {
   useSeo("Analítica");
   const [days, setDays] = useState(30);
   const [metric, setMetric] = useState("views");
-  const { data, loading, error } = useApi(`/visits/stats?days=${days}`);
+  const { data, loading, error, reload } = useApi(`/visits/stats?days=${days}`);
+  const [fixing, setFixing] = useState(false);
   const s = data?.data;
+
+  // VUELVE A GEOLOCALIZAR LAS VISITAS GUARDADAS COMO RUMANÍA O SIN PAÍS (IPs DE DIGI ESPAÑA)
+  const relocate = async () => {
+    setFixing(true);
+    try {
+      const res = await api("/visits/relocate", { method: "POST", body: {} });
+      toast.success(res.data.remaining ? `${res.message} Quedan ${res.data.remaining} IPs: vuelve a pulsar.` : res.message);
+      reload();
+    } catch (err) {
+      toast.error(err.message);
+    } finally {
+      setFixing(false);
+    }
+  };
 
   return (
     <div className="stack">
       <PageHeader
         title="Analítica"
         description="Visitas a la web pública: de dónde llegan, qué páginas ven y con qué dispositivo."
-        actions={<Segmented label="Periodo" value={days} onChange={setDays} options={RANGES} />}
+        actions={
+          <>
+            <Button variant="secondary" size="sm" icon={MapPinned} onClick={relocate} loading={fixing} title="Vuelve a calcular la ubicación de las visitas guardadas como Rumanía o sin país">
+              Corregir ubicaciones
+            </Button>
+            <Segmented label="Periodo" value={days} onChange={setDays} options={RANGES} />
+          </>
+        }
       />
 
       {loading && !s ? (
