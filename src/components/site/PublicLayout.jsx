@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import CookieBanner from "./CookieBanner";
 import WhatsAppButton from "./WhatsAppButton";
 import { PageLoader } from "../ui";
+import ErrorBoundary from "../ui/ErrorBoundary";
 import { useTrackVisits } from "../../hooks/useTrackVisits";
 
 const PublicLayout = () => {
@@ -24,9 +25,11 @@ const PublicLayout = () => {
       <a href="#contenido" className="skip-link">Saltar al contenido</a>
       <Header />
       <main id="contenido">
-        <Suspense fallback={<PageLoader />}>
-          <Outlet />
-        </Suspense>
+        <ErrorBoundary key={pathname}>
+          <Suspense fallback={<PageLoader />}>
+            <Outlet />
+          </Suspense>
+        </ErrorBoundary>
       </main>
       <Footer />
       <WhatsAppButton />

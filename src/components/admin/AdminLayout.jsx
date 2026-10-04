@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { LogoMark } from "../site/Logo";
 import { PageLoader } from "../ui";
+import ErrorBoundary from "../ui/ErrorBoundary";
 import HelpPanel from "./HelpPanel";
 import { useAuth } from "../../context/AuthContext";
 import { api } from "../../services/api";
@@ -96,9 +97,11 @@ const AdminLayout = () => {
           <LogoMark className="admin-topbar__logo" />
         </header>
         <div className="admin-content">
-          <Suspense fallback={<PageLoader />}>
-            <Outlet />
-          </Suspense>
+          <ErrorBoundary key={location.pathname}>
+            <Suspense fallback={<PageLoader />}>
+              <Outlet />
+            </Suspense>
+          </ErrorBoundary>
         </div>
       </div>
       <HelpPanel />
