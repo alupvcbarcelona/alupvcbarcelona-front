@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
-import { ArrowLeft, Ban, CalendarPlus, CircleAlert, Copy, Pencil, Printer, Receipt, RotateCcw, Send, Trash2 } from "lucide-react";
+import { ArrowLeft, Ban, CalendarPlus, CircleAlert, Copy, Download, Pencil, Printer, Receipt, RotateCcw, Send, Trash2 } from "lucide-react";
 import PageHeader from "../../components/admin/PageHeader";
 import EventModal from "../../components/admin/EventModal";
 import { LogoMark } from "../../components/site/Logo";
 import { Badge, Button, Empty, Input, Modal, PageLoader, Textarea } from "../../components/ui";
 import { useApi } from "../../hooks/useApi";
 import { useSeo } from "../../hooks/useDocumentTitle";
-import { api } from "../../services/api";
+import { api, API_URL, getToken } from "../../services/api";
 import { date, dateTime, money } from "../../lib/format";
 import { DOC_LABEL, DOC_STATUS, STATUS_BY_TYPE } from "../../lib/labels";
 
@@ -68,6 +68,19 @@ const DocumentView = () => {
       toast.success(res.message);
     });
 
+  // DESCARGA EL PDF GENERADO POR EL SERVIDOR (EL MISMO QUE SE ADJUNTA AL EMAIL)
+  const downloadPdf = () =>
+    run("pdf", async () => {
+      const response = await fetch(`${API_URL}/documents/${id}/pdf`, { headers: { Authorization: `Bearer ${getToken()}` } });
+      if (!response.ok) throw new Error("No se pudo generar el PDF.");
+      const url = URL.createObjectURL(await response.blob());
+      const a = Object.assign(document.createElement("a"), { href: url, download: `${DOC_LABEL[doc.type]}-${doc.number}.pdf` });
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    });
+
   const toInvoice = () =>
     run("invoice", async () => {
       try {
@@ -107,7 +120,8 @@ const DocumentView = () => {
               <select className="select select--sm" style={{ width: "auto" }} value={doc.status} onChange={(e) => setStatus(e.target.value)} aria-label="Estado" disabled={busy === "status"}>
                 {[...new Set([...STATUS_BY_TYPE[doc.type], doc.status])].map((s) => <option key={s} value={s}>{DOC_STATUS[s]?.label || s}</option>)}
               </select>
-              <Button variant="secondary" size="sm" icon={Printer} onClick={() => window.print()}>Imprimir / PDF</Button>
+              <Button variant="secondary" size="sm" icon={Download} onClick={downloadPdf} loading={busy === "pdf"}>Descargar PDF</Button>
+              <Button variant="ghost" size="sm" icon={Printer} onClick={() => window.print()} aria-label="Imprimir" title="Imprimir" />
               {!cancelled && <Button variant="secondary" size="sm" icon={Pencil} to={`/admin/documentos/${id}/editar`}>Modificar</Button>}
               {!cancelled ? (
                 <Button variant="danger" size="sm" icon={Ban} onClick={() => setCancelOpen(true)}>{isQuote ? "Cancelar" : "Anular factura"}</Button>
@@ -230,7 +244,7 @@ const DocumentView = () => {
         footer={<><Button variant="secondary" onClick={() => setSendOpen(false)}>Cancelar</Button><Button icon={Send} onClick={send} loading={busy === "send"} disabled={!sendForm.email}>Enviar</Button></>}
       >
         <Input label="Email del cliente" type="email" value={sendForm.email} onChange={(e) => setSendForm({ ...sendForm, email: e.target.value })} />
-        <Textarea label="Mensaje (opcional)" rows={4} value={sendForm.message} onChange={(e) => setSendForm({ ...sendForm, message: e.target.value })} hint="Si lo dejas vacío se usa un texto estándar. Recibirás una copia en el correo de la empresa." />
+        <Textarea label="Mensaje (opcional)" rows={4} value={sendForm.message} onChange={(e) => setSendForm({ ...sendForm, message: e.target.value })} hint="Si lo dejas vacío se usa un texto estándar. El documento se adjunta en PDF y recibirás una copia en el correo de la empresa." />
       </Modal>
 
       <Modal
