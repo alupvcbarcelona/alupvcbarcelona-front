@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { KeyRound, Save } from "lucide-react";
 import PageHeader from "../../components/admin/PageHeader";
+import NumberingCard from "../../components/admin/NumberingCard";
 import { Button, Card, Input, PageLoader, Select, Textarea } from "../../components/ui";
 import { api } from "../../services/api";
 import { useAuth } from "../../context/AuthContext";
@@ -107,6 +108,8 @@ const Settings = () => {
           </div>
         </Card>
       </form>
+
+      <NumberingCard />
 
       <div className="admin-grid">
         <form className="col-6" onSubmit={saveProfile}>

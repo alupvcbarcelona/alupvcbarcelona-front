@@ -307,3 +307,8 @@ a.list-item:hover, button.list-item:hover { background: var(--bg-soft); }
 .help-panel .faq details p { padding-bottom: var(--space-3); font-size: 13px; }
 .admin-sidebar__name { color: var(--ink); font-size: 14px; }
 .admin-sidebar__name strong { font-weight: 700; }
+.numbering-row { display: grid; grid-template-columns: 1fr 240px auto; gap: var(--space-4); align-items: start; padding: var(--space-4); border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.numbering-row > div:first-child { display: flex; flex-direction: column; gap: 4px; padding-top: 4px; }
+.numbering-row strong { color: var(--ink); font-size: var(--fs-sm); }
+.numbering-row .btn { margin-top: 24px; }
+@media (max-width: 720px) { .numbering-row { grid-template-columns: 1fr; } .numbering-row .btn { margin-top: 0; } }

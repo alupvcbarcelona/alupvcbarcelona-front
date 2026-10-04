@@ -97,6 +97,7 @@ export const HELP = [
       "Para cancelar una factura pulsa «Anular factura». No se borra: conserva su número, deja de contar como pendiente y queda marcada como ANULADA. Puedes reactivarla si te equivocas.",
       "Cuando el cliente pague, cambia el estado a «Pagada». El inicio del panel te muestra lo pendiente de cobro.",
       "Añade tu IBAN en Ajustes para que aparezca en las facturas.",
+      "Si ya emitiste facturas fuera del panel, en Ajustes > Numeración de documentos indica el siguiente número (por ejemplo 13 para que la próxima sea F-año-0013). Solo se puede avanzar, nunca repetir un número ya emitido.",
     ],
   },
   {
@@ -155,6 +156,7 @@ export const HELP = [
       "Instagram: en «Redes sociales» escribe tu cuenta. Vale @alupvcbarcelona, instagram.com/alupvcbarcelona o el enlace completo; se corrige solo al guardar.",
       "Cuando hay Instagram, aparece en la web: debajo de la portada del inicio, en una banda «Más trabajos en Instagram» tras la galería, en Contacto y en el pie de página. Si borras el campo y guardas, desaparece de la web.",
       "Google: en «Google (Maps y reseñas)» están los enlaces a tu ficha. Para que el cliente vaya directo a escribir la reseña, en tu Perfil de Empresa de Google pulsa «Pedir reseñas», copia el enlace (g.page/r/…/review) y pégalo en «Enlace para dejar reseñas».",
+      "En «Numeración de documentos» puedes fijar por qué número continúan las facturas y los presupuestos del año (útil si emitiste algunos fuera del panel).",
       "Elige el IVA por defecto y escribe las condiciones que quieres que aparezcan en cada presupuesto (validez, forma de pago…).",
       "Cambia tu contraseña regularmente. Cada vez que alguien inicia sesión recibes un email de aviso con la ubicación y el dispositivo.",
     ],
